@@ -62,5 +62,9 @@ The builds of whitecat from the whitecatbuild repository at https://github.com/C
 
 If you are french, for how to use git a tuto is at http://www.le-chat-noir-numerique.fr/whitecat/dokuwiki/doku.php?id=recettes_pour_git
 
+<<<<<<< HEAD
 This two folder must cloned or copy inside the whitecat_crossplateform folders but you may find some lighter Prebuilds for this two repository for your environement and DEVKIT at : http://www.le-chat-noir-numerique.fr/coding/
+=======
+This two folder must cloned or copy inside the whitecat_crossplateform folder but you may find some lighter Prebuilds for this two repository for your environement at :
+>>>>>>> modification des txt et du git ignore
 
