@@ -10,7 +10,6 @@ whitecatbuild/
 build/
 
 # ignore folders
-DEVKIT/
 doc_ol/
 
 # Compiled Object files
