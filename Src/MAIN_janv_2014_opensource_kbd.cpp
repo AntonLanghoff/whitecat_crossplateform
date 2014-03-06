@@ -565,7 +565,7 @@ if(index_quit==0 && index_is_saving==0)
 
  if(allow_artnet_in==1 && artnet_serveur_is_initialized==1 )
       {
-      if(bytesreceived=recvfrom(sock,artnet_message,sizeof(artnet_message),0,(SOCKADDR*)&sinServ,&sinsizeServ)>0)
+      if((bytesreceived=recvfrom(sock,artnet_message,sizeof(artnet_message),0,(SOCKADDR*)&sinServ,&sinsizeServ)>0))
       {receiving_bytes=1;ReceiveArtDmx();}
       else {receiving_bytes=0;}
       }
@@ -993,8 +993,7 @@ for(int i=0;i<4;i++)
 {
  audiofile_selected=player_has_file_coming_from_pos[i];
  sprintf(audiofile_name,list_audio_files[audiofile_selected]);
-//sab 25/02/2014 - names of directories or files must at least be one character long
- if(strlen(audiofile_name)>0)
+ if(strcmp (audiofile_name,"")!=0)
  {
  AffectSoundFile(i);
  }
@@ -1002,7 +1001,7 @@ rest(10);
 }
 
 
-if(index_loading_a_sound_file==0)
+if(index_loading_a_sound_file!=0)
 {
 for(int i=0;i<4;i++)
 {
@@ -1058,13 +1057,13 @@ if(old_ticks_arduino!=ticks_arduino && index_is_saving==0 && init_done==1 && ind
     main_actions_on_screen();
     break;
     case 1:
-      if(bytesreceived=recvfrom(sock,artpollreply_message,sizeof(artpollreply_message),0,(SOCKADDR*)&sinS,&sinsize)!=0)
+      if((bytesreceived = recvfrom(sock,artpollreply_message,sizeof(artpollreply_message),0,(SOCKADDR*)&sinS,&sinsize)!=0))
       {      AnalyseArtPollReply();      }
       Procedure("Art-Net Polling","Please wait 3 seconds, polling network ...");
     break;
    }
 //DEBUG
-sprintf(string_debug,"%d",channel_macro_val[23][0][0]);
+sprintf(string_debug,"%d",index_fullscreen);
 
 if(there_is_change_on_show_save_state==1)
 {

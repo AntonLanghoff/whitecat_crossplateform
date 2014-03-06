@@ -564,7 +564,7 @@ if  ( symbol_is_selected[l][u] == 1 &&  symbol_channel_is[l][u] == last_ch_selec
 generate_channel_view_list_from_patched_circuits();
 if(index_patch_affect_is_done==1)//reset de ma string de control
 {
-sprintf(string_monitor_patch,"");
+strcpy(string_monitor_patch,"");
 index_patch_affect_is_done=0;
 }
 
@@ -674,7 +674,7 @@ iddim=atol(numeric);
 
 if(index_patch_affect_is_done==1)//reset de ma string de control
 {
-sprintf(string_monitor_patch,"");
+strcpy(string_monitor_patch,"");
 index_patch_affect_is_done=0;
 }
 
@@ -1020,7 +1020,7 @@ if(key[KEY_LSHIFT]|| index_false_shift==1)
              if( index_patch_window==1 && index_ask_confirm==0)
              {
              patch_unselect_all_dimmers();
-             sprintf(string_monitor_patch,"");
+             strcpy(string_monitor_patch,"");
              index_patch_affect_is_done=0;
              }
 }
@@ -1075,12 +1075,11 @@ int key_thruth()
              }
             }
 
-            //sab 25/02/2014 - reset if not null
-            if(strlen(string_monitor_patch)>0)
+            if(strcmp(string_monitor_patch,"")!=0)
             {
             char * pch;
             pch = strstr(string_monitor_patch, " TO ");
-            if(pch!=NULL){sprintf(string_monitor_patch,"");}
+            if(pch!=0){strcpy(string_monitor_patch,"");}
             else
             {
             strcat(string_monitor_patch," TO ");
@@ -1405,7 +1404,7 @@ int key_backward()
            refresh_mem_onpreset(position_preset);
            niveauX2=0;
            }
-           sprintf(string_time_left_is,"");
+           strcpy(string_time_left_is,"");
            someone_changed_in_sequences=1;//icat
 return(0);
 }
@@ -1435,7 +1434,7 @@ int key_forward()
            refresh_mem_onpreset(position_preset);
            niveauX2=0;
            }
-           sprintf(string_time_left_is,"");
+           strcpy(string_time_left_is,"");
            someone_changed_in_sequences=1;//icat
  return(0);
 }

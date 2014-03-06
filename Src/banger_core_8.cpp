@@ -1495,8 +1495,8 @@ int param2_is=0;
 int the_fader_is=0;
 int the_icatpage_is=0;
 int numgridpl=0;
-int numgrid=0;
-int numstep=0;
+//sab 02/03/2014 unused var int numgrid=0;
+//sab 02/03/2014 unused var int numstep=0;
 switch (bangers_type[banger_num][event_num])
 {
 case 0:
@@ -1777,11 +1777,11 @@ if(the_fader_is>=0 && the_fader_is<core_user_define_nb_faders)
       {
       case 0:
       midi_send_out[the_fader_is]=0;
-       sprintf(string_event,"MIDI OUT Fader %d OFF",param2_is,the_fader_is+1);
+       sprintf(string_event,"MIDI OUT Fader %d OFF",the_fader_is+1);
       break;
       case 1:
       midi_send_out[the_fader_is]=1;
-       sprintf(string_event,"MIDI OUT Fader %d ON",param2_is,the_fader_is+1);
+       sprintf(string_event,"MIDI OUT Fader %d ON",the_fader_is+1);
       break;
       }
      break;
@@ -2532,7 +2532,7 @@ if(param1_is>=0 && param1_is<5)
       break;
       }
 
-     sprintf(audiofile_name,"");
+     strcpy(audiofile_name,"");
      AffectSoundFile(param1_is);
      player_ignited[param1_is]=0;
      player_is_onloop[param1_is]=0;
@@ -2968,8 +2968,7 @@ if(param1_is>=0 && param1_is<5)
      audiofile_selected=player_has_file_coming_from_pos[param1_is]-1;
      if(audiofile_selected<1){audiofile_selected=1;}
      sprintf(audiofile_name,list_audio_files[audiofile_selected]);
-     //sab 25/02/2014 - names of directories or files must at least be one character long
-     if(strlen(audiofile_name)>0)
+     if(strcmp (audiofile_name,"")!=0)
      {
      AffectSoundFile(param1_is);
      }
@@ -2978,8 +2977,7 @@ if(param1_is>=0 && param1_is<5)
      audiofile_selected=player_has_file_coming_from_pos[param1_is]+1;
      if(audiofile_selected>=127){audiofile_selected=126;}
      sprintf(audiofile_name,list_audio_files[audiofile_selected]);
-     //sab 25/02/2014 - names of directories or files must at least be one character long
-	 if(strlen(audiofile_name)>0)
+     if(strcmp (audiofile_name,"")!=0)
      {
      AffectSoundFile(param1_is);
      }
@@ -4022,7 +4020,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_goto_mode[numgridpl]=param2_is;
       if(param2_is==1){sprintf(string_event,"GridPl %d MacroGoto /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroGoto %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroGoto /Off",numgridpl+1);}
      }
      }
      break;
@@ -4034,7 +4032,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_seekto_mode[numgridpl]=param2_is;
      if(param2_is==1){sprintf(string_event,"GridPl %d MacroSeek /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroSeek %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroSeek /Off",numgridpl+1);}
      }
      }
      break;
@@ -4046,7 +4044,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_stoplay_mode[numgridpl]=param2_is;
      if(param2_is==1){sprintf(string_event,"GridPl %d MacroStopPlay /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroStopPlay %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroStopPlay /Off",numgridpl+1);}
      }
      }
      break;
