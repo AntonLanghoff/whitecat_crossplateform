@@ -1,6 +1,5 @@
-#ignore IDE layouts and depend
-*.layout
-*.depend
+#ignore codeblocks and dev C++
+IDE/
 
 # lib folder
 whitecatlib/
