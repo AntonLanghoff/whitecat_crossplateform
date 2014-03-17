@@ -109,7 +109,7 @@ return(0);
 int reset_poll_list()
 {
 for(int rt=0;rt<17;rt++)
-{sprintf(PollReplyIs[rt],"");}
+{strcpy(PollReplyIs[rt],"");}
 count_artopoll_received=0;
 return(0);
 }

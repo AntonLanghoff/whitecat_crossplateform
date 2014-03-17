@@ -859,7 +859,7 @@ int operations_confirmation()
     if(mem_to_rec>0 && mem_to_rec<9999)
     {
      copy_mem_in(mem_to_rec);
-     sprintf(numeric,"");
+     strcpy(numeric,"");
      numeric_postext=0;
     }
     refresh_mem_onpreset(position_preset);someone_changed_in_sequences=1;//icat
@@ -1016,8 +1016,8 @@ int operations_confirmation()
 
  do_ASCII_export();
  scan_importfolder("ascii");
- sprintf(importfile_name,"");
- sprintf(string_typeexport_view,"");
+ strcpy(importfile_name,"");
+ strcpy(string_typeexport_view,"");
  index_menu_save=0;
  sprintf(string_Last_Order,">>ASCII export done");
  isASCII=0; isPdf=0;  isSchwz=0;isAlq=0;
@@ -1030,8 +1030,8 @@ int operations_confirmation()
  {
  do_pdf_export();
  scan_importfolder("pdf");
- sprintf(importfile_name,"");
- sprintf(string_typeexport_view,"");
+ strcpy(importfile_name,"");
+ strcpy(string_typeexport_view,"");
  sprintf(string_Last_Order,">>PDF export done");
  index_menu_save=0;
  isASCII=0; isPdf=0;  isSchwz=0;isAlq=0;
@@ -1052,8 +1052,8 @@ int operations_confirmation()
  reset_show();
  do_ASCII_import();
  sprintf(my_show_is_coming_from,"Loaded from ASCII %s",importfile_name);//pour retracer d ou vient la conduite
- sprintf(importfile_name,"");
- sprintf(string_typeexport_view,"");
+ strcpy(importfile_name,"");
+ strcpy(string_typeexport_view,"");
  sprintf(string_Last_Order,">>ASCII import done");
  index_menu_save=0;   isASCII=0; isPdf=0;  isSchwz=0;
  isAlq=0;
@@ -1069,8 +1069,8 @@ int operations_confirmation()
  reset_show();
  do_Schwartzpeter_import();
  sprintf(my_show_is_coming_from,"Loaded from SCHWZ %s",importfile_name);//pour retracer d ou vient la conduite
- sprintf(importfile_name,"");
- sprintf(string_typeexport_view,"");
+ strcpy(importfile_name,"");
+ strcpy(string_typeexport_view,"");
  sprintf(string_Last_Order,">>SCHARTZPETER import done");
  index_menu_save=0;   isASCII=0; isPdf=0; isSchwz=0;
  isAlq=0;
@@ -1085,8 +1085,8 @@ int operations_confirmation()
  reset_show();
  do_Alq_import();
  sprintf(my_show_is_coming_from,"Loaded from ASCII ALQ %s",importfile_name);//pour retracer d ou vient la conduite
- sprintf(importfile_name,"");
- sprintf(string_typeexport_view,"");
+ strcpy(importfile_name,"");
+ strcpy(string_typeexport_view,"");
  sprintf(string_Last_Order,">>Alq import done");
  index_menu_save=0;
  isASCII=0; isPdf=0; isSchwz=0; isAlq=0;
@@ -1101,7 +1101,7 @@ int operations_confirmation()
  {
  reset_save_load_report_string();
  save_the_show(savefile_name);
- sprintf(savefile_name,"");
+ strcpy(savefile_name,"");
  index_type=0; index_menu_save=0;   isASCII=0; isPdf=0; isSchwz=0;isAlq=0;
  substract_a_window(W_SAVE);
  }
@@ -1111,14 +1111,14 @@ int operations_confirmation()
  reset_save_load_report_string();
  load_the_show(savefile_name); index_menu_save=0;   index_type=0;
  isASCII=0; isPdf=0; isSchwz=0;isAlq=0;
- sprintf(string_typeexport_view,"");
+ strcpy(string_typeexport_view,"");
  substract_a_window(W_SAVE);
  }
 
  else if(index_do_resetshow==1)
  {
  GlobInit();
- sprintf(string_typeexport_view,"");
+ strcpy(string_typeexport_view,"");
  sprintf(string_Last_Order,">>Reset of show in memory done");
 
  }

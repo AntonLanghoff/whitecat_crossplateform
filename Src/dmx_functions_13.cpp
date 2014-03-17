@@ -347,7 +347,7 @@ if(auto_reset_crossfade_speed_on_link==1 && (Links_Memoires[position_onstage]==0
 {crossfade_speed=64;}
 
 crossfade_done_time=0;
-sprintf(string_time_left_is,"");
+strcpy(string_time_left_is,"");
 if(index_link_speed_crossfade_to_gpl1==1)
 {  grid_crossfade_speed[0]=crossfade_speed;
    midi_levels[1508]=crossfade_speed;

@@ -847,7 +847,7 @@ reset_audio_indexs_to_dock();
 break;
 case 34://name
 index_type=toggle(index_type);
-sprintf(numeric,"");numeric_postext=0;
+strcpy(numeric,"");numeric_postext=0;
 break;
 case 35://draw
 if(index_draw_window==0){add_a_window(W_DRAW);substract_a_window(W_MAINMENU);}

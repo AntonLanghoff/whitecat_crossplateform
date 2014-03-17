@@ -95,7 +95,7 @@ case 3:
 sprintf(temp_plot_info,"A.%d",gelat[calc][symb][i]);
 break;
 default:
-sprintf(temp_plot_info,"");
+strcpy(temp_plot_info,"");
 break;
 }
 petitchiffrenoir.Print(temp_plot_info,plotx+10,(int)(ploty+(i*10)));
@@ -3732,7 +3732,7 @@ PlotOptionsEdit_Little.DrawOutline(CouleurLigne.WithAlpha(0.5));
 }
 break;
 case 1:
-sprintf(TextPlot,"");
+strcpy(TextPlot,"");
 PlotOptionsEdit_Long.MoveTo(Vec2D(plotx+20,ploty+65+(20*l)));
 PlotOptionsEdit_Long.Draw(CouleurPlotLine.WithAlpha(0.2));
 petitchiffrenoir.Print( descriptif_projecteurs[(symbol_channel_is[view_plot_calc_number_is][last_selected_symbol_is])],plotx+25,ploty+78+(20*l));

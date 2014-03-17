@@ -74,7 +74,7 @@ if(device==0)
 {
 if(arduino_device_0_is_ignited==1)
 {
-sprintf(arduino_order,"");
+strcpy(arduino_order,"");
 arduino_order[0]='S';arduino_order[1]='D';arduino_order[2]='/';arduino_order[3]='\0';
 //arduino_order[3]='\0';//pour UNO [3]='\0' pour 2009 =0
 int nBytesSendtoArduino=serial0.SendData(arduino_order,4);

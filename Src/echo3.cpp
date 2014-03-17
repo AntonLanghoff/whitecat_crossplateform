@@ -562,7 +562,7 @@ break;
 }
 petitchiffre.Print(tcmp,xe+500 ,ye+70);
 
-sprintf(tcmp,"");
+strcpy(tcmp,"");
 int index_ec=0;
 
 //ECHO presets
@@ -744,7 +744,7 @@ switch(cl)
  sprintf(tcmp,"Energy: %.2f",tmp_lev);
  break;
  default:
-  sprintf(tcmp,"");
+  strcpy(tcmp,"");
  break;
 }
 sprintf(mid_lev,"%d",(int)(tmp_lev*127));

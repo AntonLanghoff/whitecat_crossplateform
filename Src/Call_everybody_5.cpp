@@ -237,7 +237,7 @@ case 4://save
 IDmidi=1330;
 IDcommand=cl;
 sprintf(nom_commande,"Save");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_menu_save;
 break;
 default:
@@ -264,35 +264,35 @@ case 1:
 IDmidi=1332;
 IDcommand=cl+10;
 sprintf(nom_commande,"List");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_list_projecteurs;
 break;
 case 2:
 IDmidi=1594;
 IDcommand=cl+10;
 sprintf(nom_commande,"Light Plot");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_plot_window;
 break;
 case 3:
 IDmidi=1335;
 IDcommand=cl+10;
 sprintf(nom_commande,"Freeze");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_do_freeze;
 break;
 case 4:
 IDmidi=1541;
 IDcommand=cl+10;
 sprintf(nom_commande,"Exclude");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_do_exclude;
 break;
 case 5://my window
 IDmidi=2047; // c est la derniere commande midi, a changer et  définir voir tableau affectations midi
 IDcommand=cl+10;
 sprintf(nom_commande,"MY WINDOW");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae= index_my_window;
 break;
 default:
@@ -339,7 +339,7 @@ case 4:
 IDmidi=1340;
 IDcommand=cl+20;
 sprintf(nom_commande,"GridPl.");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_grider_window;
 break;
 
@@ -367,14 +367,14 @@ case 1:
 IDmidi=1339;
 IDcommand=cl+30;
 sprintf(nom_commande,"Mover");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_show_mover_window;
 break;
 case 2:
 IDmidi=1662;
 IDcommand=cl+30;
 sprintf(nom_commande,"ECHO");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_show_echo_window;
 break;
 case 3:
@@ -395,7 +395,7 @@ case 5:
 IDmidi=1659;
 IDcommand=cl+30;
 sprintf(nom_commande,"Draw");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 break;
 default:
 break;
@@ -421,7 +421,7 @@ case 1:
 IDmidi=1341;
 IDcommand=cl+40;
 sprintf(nom_commande,"iCat Builder");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_window_gui_iCat;
 break;
 case 2:
@@ -435,7 +435,7 @@ case 3:
 IDmidi=1342;
 IDcommand=cl+40;
 sprintf(nom_commande,"Help");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_call_help;
 break;
 case 4:
@@ -520,14 +520,14 @@ case 3://wizard
 IDmidi=1329;
 IDcommand=cl+10;
 sprintf(nom_commande,"WIZARD");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae= index_show_wizard_window;
 break;
 case 4://save
 IDmidi=1330;
 IDcommand=cl+10;
 sprintf(nom_commande,"SAVE");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_menu_save;
 break;
 default:
@@ -552,35 +552,35 @@ case 1:
 IDmidi=1332;
 IDcommand=cl+10;
 sprintf(nom_commande,"LIST");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_list_projecteurs;
 break;
 case 2:
 IDmidi=1594;
 IDcommand=cl+30;
 sprintf(nom_commande,"LIGHT PLOT");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_plot_window;
 break;
 case 3:
 IDmidi=1335;
 IDcommand=cl+10;
 sprintf(nom_commande,"Freeze");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_do_freeze;
 break;
 case 4:
 IDmidi=1541;
 IDcommand=cl+10;
 sprintf(nom_commande,"Exclude");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_do_exclude;
 break;
 case 5://my window
 IDmidi=2047; //a re définir voir tableau affectations midi
 IDcommand=cl+10;
 sprintf(nom_commande,"MY WINDOW");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae= index_my_window;
 break;
 default:
@@ -627,7 +627,7 @@ case 4:
 IDmidi=1340;
 IDcommand=cl+30;
 sprintf(nom_commande,"GRID PL.");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_grider_window;
 break;
 
@@ -654,14 +654,14 @@ case 1:
 IDmidi=1339;
 IDcommand=cl+30;
 sprintf(nom_commande,"Mover");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_show_mover_window;
 break;
 case 2:
 IDmidi=1662;
 IDcommand=cl+30;
 sprintf(nom_commande,"ECHO");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_show_echo_window;
 break;
 case 3:
@@ -682,7 +682,7 @@ case 5:
 IDmidi=1659;
 IDcommand=cl+30;
 sprintf(nom_commande,"DRAW");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_draw_window;
 break;
 default:
@@ -708,7 +708,7 @@ case 1:
 IDmidi=1341;
 IDcommand=cl+30;
 sprintf(nom_commande,"iCat Builder");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_window_gui_iCat;
 break;
 case 2:
@@ -722,7 +722,7 @@ case 3:
 IDmidi=1342;
 IDcommand=cl+40;
 sprintf(nom_commande,"Help");
-sprintf(raccourci_commande,"");
+strcpy(raccourci_commande,"");
 stae=index_call_help;
 break;
 case 4:

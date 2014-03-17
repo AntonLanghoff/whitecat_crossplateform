@@ -82,7 +82,7 @@ int scan_importfolder(char *subdir)
 {
 for(int i=0;i<127;i++)
 {
- sprintf(list_import_files[i],"");
+ strcpy(list_import_files[i],"");
 }
 
     struct al_ffblk f;

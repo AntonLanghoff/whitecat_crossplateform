@@ -646,7 +646,7 @@ if(need_send_pwm==0)
 
 if(index_send_pwm_data==1 && need_send_pwm==0)
 {
-sprintf(temp_send_pwm,"");
+strcpy(temp_send_pwm,"");
 temp_send_pwm[0]='P';temp_send_pwm[1]='W';temp_send_pwm[2]='/';
 
 for(int k=0;k<=arduino_max_digital;k++)
@@ -724,7 +724,7 @@ previous_digital_data_to_arduino[p]=digital_data_to_arduino[p]; }
 
 if(index_send_digital_data)
 {
-sprintf(arduino_order,"");
+strcpy(arduino_order,"");
 temp_send[0]='D';temp_send[1]='O';temp_send[2]='/';
 
 for(int k=0;k<=arduino_max_digital;k++)
@@ -772,7 +772,7 @@ for(int p=0;p<=arduino_max_digital;p++)
   type_pin[p]= arduino_digital_type[p];
 }
 
-sprintf(temp_send_config,"");
+strcpy(temp_send_config,"");
 temp_send_config[0]='C';temp_send_config[1]='O';temp_send_config[2]='/';
 
 for(int k=0;k<=arduino_max_digital;k++)

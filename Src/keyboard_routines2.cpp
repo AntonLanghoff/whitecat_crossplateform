@@ -245,7 +245,7 @@ break;
 
 case KEY_F5:
               index_type=toggle(index_type);
-              sprintf(numeric,"");numeric_postext=0;
+              strcpy(numeric,"");numeric_postext=0;
 break;
 
 case KEY_F6:

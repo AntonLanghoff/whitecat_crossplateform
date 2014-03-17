@@ -195,9 +195,9 @@ return(0);
 int clear_banger(int bg)
 {
 bang_is_sended[bg]=1;
-sprintf(bangers_name[bg],"");
+strcpy(bangers_name[bg],"");
 bangers_name[bg][24]='\n';
-sprintf(string_alarm[bg],"");
+strcpy(string_alarm[bg],"");
 for(int dd=0;dd<6;dd++)
 {
 bangers_type[bg][dd]=0;//127 bangers // 6 events par banger
@@ -639,7 +639,7 @@ int reset_indexs_confirmation()
    index_ask_copy_banger=0;
    index_ask_clear_banger=0;
 
-  sprintf(string_confirmation,"");
+  strcpy(string_confirmation,"");
  return(0);
 }
 
@@ -1650,7 +1650,7 @@ break;
 }
 }
 }
-sprintf(numeric,"");
+strcpy(numeric,"");
 numeric_postext=0;
 sprintf(string_Last_Order,"Got selected channel from %d.%d",the_mem/10,the_mem%10);
 return(0);
@@ -1729,7 +1729,7 @@ case 4:
 sprintf(thetypinfo,"C.Change");
 break;
 default:
-sprintf(thetypinfo,"");
+strcpy(thetypinfo,"");
 break;
 }
 sprintf(string_last_midi_id,"%s selected is Ch: %d Pitch: %d Typ: %s" ,command, miditable[1][control],miditable[2][control],thetypinfo);
@@ -2355,7 +2355,7 @@ int scan_audiofolder()
     //reset
     for (int o=0;o<128;o++)
     {
-     sprintf(list_audio_files[o],"");
+     strcpy(list_audio_files[o],"");
     }
     //detection
     struct al_ffblk f;
@@ -3374,7 +3374,7 @@ Times_Memoires[mem_n][3]=Times_Memoires[CTRLC_mem_to_copy][3];
 Links_Memoires[mem_n]=Links_Memoires[CTRLC_mem_to_copy];
 Banger_Memoire[mem_n]=Banger_Memoire[CTRLC_mem_to_copy];
 sprintf(string_Last_Order,"Copyed in Mem. %d.%d Mem. %d.%d", mem_n/10,mem_n%10,CTRLC_mem_to_copy/10,CTRLC_mem_to_copy%10);
-sprintf(numeric,"");
+strcpy(numeric,"");
 numeric_postext=0;
 return(0);
 }
@@ -3492,8 +3492,8 @@ Times_Memoires[mem_to_create][2]=0.0;
 Times_Memoires[mem_to_create][1]=default_time;
 Times_Memoires[mem_to_create][3]=default_time;
 ratio_cross_manuel[mem_to_create]=0;
-sprintf(descriptif_memoires[mem_to_create],"");
-sprintf(annotation_memoires[mem_to_create],"");
+strcpy(descriptif_memoires[mem_to_create],"");
+strcpy(annotation_memoires[mem_to_create],"");
 Links_Memoires[mem_to_create]=0;
 Banger_Memoire[mem_to_create]=0;
 MemoiresExclues[mem_to_create]=0;
@@ -3533,8 +3533,8 @@ Times_Memoires[mem_to_create][2]=0.0;
 Times_Memoires[mem_to_create][1]=default_time;
 Times_Memoires[mem_to_create][3]=default_time;
 ratio_cross_manuel[mem_to_create]=0;
-sprintf(descriptif_memoires[mem_to_create],"");
-sprintf(annotation_memoires[mem_to_create],"");
+strcpy(descriptif_memoires[mem_to_create],"");
+strcpy(annotation_memoires[mem_to_create],"");
 Links_Memoires[mem_to_create]=0;
 Banger_Memoire[mem_to_create]=0;
 MemoiresExclues[mem_to_create]=0;
@@ -3965,7 +3965,7 @@ if(lfo_mode_is[cmptfader]==0 && lfo_cycle_is_on[cmptfader]==1)
 
 if(is_dock_for_lfo_selected[cmptfader][dokmin]==1){strcat(report_minifader_str," [Loop]");}
 sprintf(str_minifader_feedback[4],report_minifader_str);
-sprintf(report_minifader_str,"");//clear
+strcpy(report_minifader_str,"");//clear
 if(lfo_do_next_step[cmptfader][0]==1)
 {
 sprintf(str_minifader_feedback[5],"ToPrev. Dock");
@@ -3998,7 +3998,7 @@ break;
 sprintf(string_fader_stop_pos[cmptfader],"%d",niv);
 sprintf(str_minifader_feedback[9],"Stop Pos ON: %d",niv);
 }
-else if(StopPosOn[cmptfader]==0){sprintf(str_minifader_feedback[9],"");}
+else if(StopPosOn[cmptfader]==0){strcpy(str_minifader_feedback[9],"");}
 return(0);
 }
 
@@ -4580,7 +4580,7 @@ if(Times_Memoires[position_preset][0]>0.00)
  }
 sprintf(cross_din,string_conversion_timeis);
 }
-else {sprintf(cross_din,"");}
+else {strcpy(cross_din,"");}
 
 
 //temps de delay sortie ( enregistré dans le préset)
@@ -4599,7 +4599,7 @@ affichage_time_format(val_accel);
 }
 sprintf(cross_dout,string_conversion_timeis);
 }
-else {sprintf(cross_dout,"");}
+else {strcpy(cross_dout,"");}
 
 //affichages temps IN et OUT
 if(crossfade_speed<64)
@@ -4981,8 +4981,8 @@ MemoiresExistantes[m]=0;
 MemoiresDetruites[m]=0;
 MemoiresExclues[m]=0;
 nbre_de_mems_manipulees=0;
-sprintf(descriptif_memoires[m],"");
-sprintf(annotation_memoires[m],"");
+strcpy(descriptif_memoires[m],"");
+strcpy(annotation_memoires[m],"");
 descriptif_memoires[m][24]='\n';
 annotation_memoires[m][24]='\n';
 for(int i=0;i<514;i++)
@@ -5038,7 +5038,7 @@ if(specify_who_to_save_load[5]==1)//channels LIST///////////////////////////////
 {
 for(int io=0;io<514;io++)
 {
-sprintf(descriptif_projecteurs[io],"");
+strcpy(descriptif_projecteurs[io],"");
 descriptif_projecteurs[io][24]='\n';
 for(int macr=0;macr<4;macr++)
 {
@@ -5152,7 +5152,7 @@ for(int dd=0;dd<6;dd++)
 DockTypeIs[in][dd]=9;
 DockIsSelected[in][dd]=0;//alls dock not selected
 DockHasMem[in][dd]=0;
-sprintf(DockName[in][dd],"");
+strcpy(DockName[in][dd],"");
 DockName[in][dd][24]='\n';
 DrawAffectedToDck[in][dd]=0;
 for(int c=0;c<514;c++)
@@ -5226,7 +5226,7 @@ if(specify_who_to_save_load[16]==1)//chasers////////////////////////////////////
 {
 for (int l=0;l<128;l++)
 {
-sprintf(chaser_name[l],"");
+strcpy(chaser_name[l],"");
 time_unit[l]=1.0;
 chaser_is_playing[l]=0;
 chaser_is_in_loop[l]=0;
@@ -5246,7 +5246,7 @@ track_is_on[l][tr]=0;
 track_level[l][tr]=127;
 TrackTypeIs[l][tr]=0;
 TrackHasMem[l][tr]=0;
-sprintf(chaser_track_name[l][tr],"");
+strcpy(chaser_track_name[l][tr],"");
 chaser_track_name[l][tr][24]='\n';
 for(int ste=0;ste<nbre_de_cases_par_track;ste++)
 {
@@ -5771,10 +5771,10 @@ gelat_family[calc][s][0]=0;
 gelat_family[calc][s][1]=0;
 gelat_family[calc][s][2]=0;
 symbol_is_linked_to[calc][s]=0;
-sprintf(symbol_note[calc][s][0],"");
-sprintf(symbol_note[calc][s][1],"");
-sprintf(symbol_note[calc][s][2],"");
-sprintf(symbol_note[calc][s][3],"");
+strcpy(symbol_note[calc][s][0],"");
+strcpy(symbol_note[calc][s][1],"");
+strcpy(symbol_note[calc][s][2],"");
+strcpy(symbol_note[calc][s][3],"");
 
 //relatif_plot_xy[4][nbre_symbol_per_layer][4][2];//calc / Symbols / Famille / X Y
 for(int opt=0;opt<5;opt++)
@@ -5810,7 +5810,7 @@ for(int i=0;i<4;i++)
 {
 shape_position[s][i]=0;//pour les lignes
 }
-sprintf(shape_legend_name[s],"");
+strcpy(shape_legend_name[s],"");
 shape_legend_name[s][24]='\0';
 shape_relativ_position_legend_name[s][0]=0;
 shape_relativ_position_legend_name[s][1]=0;

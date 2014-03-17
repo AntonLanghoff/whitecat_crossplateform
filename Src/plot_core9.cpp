@@ -130,7 +130,7 @@ for(int s=0;s<127;s++)
 {
 tmp_gel_list[num][t][s]=0;
 }
-sprintf(Geo[t],"");
+strcpy(Geo[t],"");
 }
 }
 
@@ -207,7 +207,7 @@ case 3:
      sprintf(GelTyp,"Apollo");
 break;
 default:
-     sprintf(GelTyp,"");
+     strcpy(GelTyp,"");
 break;
 }
 sprintf(Geo[index_geo]," %s %d x %d %s",GelTyp, t , tmp_gel_list[g][t][s],symbol_nickname[s]);
@@ -409,7 +409,7 @@ for(int i=0;i<4;i++)
 {
 shape_position[s][i]=0;//pour les lignes
 }
-sprintf(shape_legend_name[s],"");
+strcpy(shape_legend_name[s],"");
 shape_legend_name[s][24]='\0';
 shape_relativ_position_legend_name[s][0]=0;
 shape_relativ_position_legend_name[s][1]=0;
@@ -938,7 +938,7 @@ relatif_plot_xy[calc][s][opt][1]=0;
 }
 for(int n=0;n<4;n++)
 {
-sprintf(symbol_note[calc][s][n],"");
+strcpy(symbol_note[calc][s][n],"");
 }
 
 clear_grouped_to_symbols(calc, s);

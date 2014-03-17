@@ -2532,7 +2532,7 @@ if(param1_is>=0 && param1_is<5)
       break;
       }
 
-     sprintf(audiofile_name,"");
+     strcpy(audiofile_name,"");
      AffectSoundFile(param1_is);
      player_ignited[param1_is]=0;
      player_is_onloop[param1_is]=0;

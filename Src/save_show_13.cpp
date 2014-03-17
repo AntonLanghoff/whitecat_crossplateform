@@ -606,7 +606,7 @@ else sprintf(string_save_load_report[idf],"Loaded file %s",  file_midi_send_out)
 load_Fader_state_to_midi_array();
 fclose(fpm);
 //REROLL
-sprintf(rep,"");
+strcpy(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 
