@@ -1266,7 +1266,7 @@ char read_buff[ 512 ] ;
      sprintf(string_save_load_report[idf],"! config_dmx.txt");
      return 1;
 	}
-	fscanf( cfg_file , "%s\n" ,  &motcleinterfaceis );
+	fscanf( cfg_file , "%s\n" ,  motcleinterfaceis );
 	fscanf( cfg_file , "%d\n" ,  &index_artnet_doubledmx);
 	fclose( cfg_file );
 

@@ -768,7 +768,7 @@ int load_core_config()
 	}
 	else
 	{
-	fscanf( cfg_file , "%d / %d / %d / %d / %d / %d / %d / %d %\n"  , &core_user_define_nb_faders, &core_user_define_nb_docks , &core_user_define_nb_chasers,
+	fscanf( cfg_file , "%d / %d / %d / %d / %d / %d / %d /\n"  , &core_user_define_nb_faders, &core_user_define_nb_docks , &core_user_define_nb_chasers,
     &core_user_define_nb_tracks_per_chasers, &core_user_define_nb_gridplayers, &core_user_define_nb_bangers, &core_user_define_nb_echo);
     }
     //deuxieme ligne les args
@@ -1210,7 +1210,7 @@ int Load_Plot_Plan_config()
 	{     sprintf(string_save_load_report[idf],"Error on reading plot_plan_config.txt");b_report_error[idf]=1; 	}
     else {sprintf(string_save_load_report[idf],"plot_plan_config.txt readed");}
 //2eme ligne
-	fscanf( cfg_file , "%s\n" , &Name_of_plane_is);
+	fscanf( cfg_file , "%s\n" , Name_of_plane_is);
 //args
 	if( !fgets( read_buff_winfil, sizeof( read_buff_winfil ) ,cfg_file ) )
 	{
@@ -1610,7 +1610,7 @@ int Load_Audio_Conf()
 	if( !fgets( read_buff_winfil , sizeof( read_buff_winfil ) ,cfg_file ) )
 	{     sprintf(string_save_load_report[idf],"Error on reading audio_conf.txt");b_report_error[idf]=1; 	}
     else {sprintf(string_save_load_report[idf],"audio_conf.txt readed");}
-	fscanf( cfg_file , "%s\n" ,  &audio_folder);
+	fscanf( cfg_file , "%s\n" ,  audio_folder);
 	fclose( cfg_file );
     }
 

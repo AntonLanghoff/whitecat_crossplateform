@@ -1777,11 +1777,11 @@ if(the_fader_is>=0 && the_fader_is<core_user_define_nb_faders)
       {
       case 0:
       midi_send_out[the_fader_is]=0;
-       sprintf(string_event,"MIDI OUT Fader %d OFF",param2_is,the_fader_is+1);
+       sprintf(string_event,"MIDI OUT Param %d Fader %d OFF",param2_is,the_fader_is+1);
       break;
       case 1:
       midi_send_out[the_fader_is]=1;
-       sprintf(string_event,"MIDI OUT Fader %d ON",param2_is,the_fader_is+1);
+       sprintf(string_event,"MIDI OUT Param %d Fader %d ON",param2_is,the_fader_is+1);
       break;
       }
      break;
@@ -4020,7 +4020,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_goto_mode[numgridpl]=param2_is;
       if(param2_is==1){sprintf(string_event,"GridPl %d MacroGoto /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroGoto %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroGoto /Off",numgridpl+1);}
      }
      }
      break;
@@ -4032,7 +4032,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_seekto_mode[numgridpl]=param2_is;
      if(param2_is==1){sprintf(string_event,"GridPl %d MacroSeek /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroSeek %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroSeek /Off",numgridpl+1);}
      }
      }
      break;
@@ -4044,7 +4044,7 @@ switch(bangers_action[banger_num][event_num])
      {
      grider_stoplay_mode[numgridpl]=param2_is;
      if(param2_is==1){sprintf(string_event,"GridPl %d MacroStopPlay /On",numgridpl+1);}
-     else{sprintf(string_event,"GridPl %d MacroStopPlay %d /Off",numgridpl+1);}
+     else{sprintf(string_event,"GridPl %d MacroStopPlay /Off",numgridpl+1);}
      }
      }
      break;

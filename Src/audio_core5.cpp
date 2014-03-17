@@ -71,7 +71,7 @@ int Load_audiofiles_cues()
              {
 	         fgets( read_buff_winfil , sizeof( read_buff_winfil ) ,cfg_file );
              char tmp_name_f[72];
-             sscanf(read_buff_winfil , "%s / %d / %d\n" ,  &tmp_name_f,&temp_ain[index_af],&temp_aout[index_af] );
+             sscanf(read_buff_winfil , "%s / %d / %d\n" ,  tmp_name_f,&temp_ain[index_af],&temp_aout[index_af] );
 
              for(int po=0;po<127;po++)
              {

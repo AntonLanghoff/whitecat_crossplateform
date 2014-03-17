@@ -226,7 +226,7 @@ fscanf( cfg_file , "%d %d \n" ,  &index_broadcast , &Univers  );
 /* on saute la ligne de commentaire */
 fgets( read_buff , sizeof( read_buff ) , cfg_file );
 //deuxieme ligne des args
-fscanf( cfg_file  , "%s\n" , &ip_artnet );
+fscanf( cfg_file  , "%s\n" , ip_artnet );
 
 fclose( cfg_file );
 return(0);
