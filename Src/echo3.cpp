@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int do_bouncing_levels(int ech)
 {
 //echo_global_params[24][3];Gravity Mass Delta
@@ -458,7 +459,7 @@ echochanis=echo_grid_channel_position[echo_selected]+sh;
 Rect MassE(Vec2D(xe+25+(sh*30),ye+(127*(1.0-echo_levels[echo_selected][1][echochanis]))),Vec2D(30,echo_levels[echo_selected][1][echochanis]*127));
 MassE.Draw(Discrete2);
 
-//enregistrement level de départ
+//enregistrement level de dÃ©part
 ChanEcho.MoveTo(Vec2D(xe+25+(sh*30),ye+127-(snap_echo_to_recall[echo_selected][echochanis]*127)));
 ChanEcho.Draw(CouleurFond.WithAlpha(0.3));
 
@@ -562,7 +563,7 @@ break;
 }
 petitchiffre.Print(tcmp,xe+500 ,ye+70);
 
-strcpy(tcmp,"");
+sprintf(tcmp,"");
 int index_ec=0;
 
 //ECHO presets
@@ -744,7 +745,7 @@ switch(cl)
  sprintf(tcmp,"Energy: %.2f",tmp_lev);
  break;
  default:
-  strcpy(tcmp,"");
+  sprintf(tcmp,"");
  break;
 }
 sprintf(mid_lev,"%d",(int)(tmp_lev*127));
@@ -770,11 +771,6 @@ Frame.DrawOutline(CouleurBlind);
 }
 
 }
-
-
 }
-
-
-
 return(0);
 }

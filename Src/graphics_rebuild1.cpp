@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int RetourInfos(int x_info,int y_info)
 {
 
@@ -96,7 +97,7 @@ ChannelScroller(ChScrollX, ChScrollY);
 if(ClassicalChannelView ==1)
 {
 Canvas::SetClipping(0,ChannelYMenu+hauteur_ChannelMenu,largeur_ecran,hauteur_ecran);
-ClassicalChannelSpace(XChannels, YChannels,  scroll_channelspace);// x y espacement latéral // espacement vertical // scrolling down
+ClassicalChannelSpace(XChannels, YChannels,  scroll_channelspace);// x y espacement latÃ©ral // espacement vertical // scrolling down
 Canvas::DisableClipping();
 }
 

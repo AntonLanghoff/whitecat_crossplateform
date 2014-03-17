@@ -41,7 +41,16 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 //sab 29/05/2013 deb ------------------------------------------------------
+/**
+ * \fn bool wc_askConfirmWindowIsOpen()
+ * \brief Is a mandatory pop up open ?
+* Une fenêtre de confirmation d'action est elle ouverte ?
+ *
+ * \param none - internal use of global array window_opened[].
+ * \return bool.
+ */
 bool wc_askConfirmWindowIsOpen()
 {
 	bool f_bool = false;
@@ -133,7 +142,7 @@ switch(window_opened[i])
         {window_is=window_opened[i];stop_detect=1;}
         break;
         case W_BANGER:
-        if(mouse_x>=X_banger && mouse_x<=X_banger+size_X_Banger && mouse_y>=Y_banger && mouse_y<=Y_banger+size_Y_Banger)
+        if(mouse_x>=X_banger && mouse_x<=X_banger+480 && mouse_y>=Y_banger && mouse_y<=Y_banger+300)
         {window_is=window_opened[i];stop_detect=1;}
         break;
         case W_ALARM:
@@ -599,4 +608,3 @@ do_logical_ChannelsMenuSelection(ChannelXMenu,ChannelYMenu);
 
  return(0);
 }
-

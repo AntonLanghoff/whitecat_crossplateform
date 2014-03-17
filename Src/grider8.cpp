@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int TheStepBox(int xb,int yb, int num_grid_player)
 {
 
@@ -58,7 +59,7 @@ next_button_view(xb+60,yb,0);
 if(window_focus_id==926 )
 {
  //Step minus
-if((window_focus_id==W_GRID) &&  (mouse_x>xb & mouse_x<xb+20) && (mouse_y>yb && mouse_y<yb+20) )
+if(window_focus_id==W_GRID &&  mouse_x>xb & mouse_x<xb+20 && mouse_y>yb && mouse_y<yb+20 )
 {
  if(Midi_Faders_Affectation_Type!=0)
 {
@@ -75,7 +76,7 @@ if(mouse_b&1 )
 }
 }
 //Step plus
-if((window_focus_id==W_GRID) && (mouse_x>xb+60 & mouse_x<xb+80) && (mouse_y>yb) && (mouse_y<yb+20) )
+if(window_focus_id==W_GRID && mouse_x>xb+60 & mouse_x<xb+80 && mouse_y>yb && mouse_y<yb+20 )
 {
 if(Midi_Faders_Affectation_Type!=0)
 {
@@ -105,7 +106,7 @@ if( Midi_Faders_Affectation_Type!=0)
  }
 }
 //chargement d'un pas, ou affectation d'un temps ou clear  du pas
-if((window_focus_id==W_GRID) && (mouse_x>xb+22 & mouse_x<xb+57) && (mouse_y>yb-5) && (mouse_y<yb-25) )
+if(window_focus_id==W_GRID && mouse_x>xb+22 & mouse_x<xb+57 && mouse_y>yb-5 && mouse_y<yb-25 )
 {
 StepB.DrawOutline(CouleurLigne);
 if( Midi_Faders_Affectation_Type!=0)
@@ -148,7 +149,7 @@ if(actual_time<(grid_crossfade_start_time[num_grid_player]+grid_delay_in[num_gri
 BackPreset.Draw(CouleurBlind.WithAlpha(alpha_blinker));
 }
 }
- //accélérometer du player
+ //accÃ©lÃ©rometer du player
  Rect AcelGrid(Vec2D(xb,yb+30),Vec2D(127,10));
  AcelGrid.DrawOutline(CouleurLigne.WithAlpha(0.5));
  Rect AccelB(Vec2D(xb+grid_crossfade_speed[num_grid_player]-5,yb+30),Vec2D(10,10));
@@ -477,7 +478,7 @@ else if(grid_levels[grid_selected][gr_st_selected][tempfu]>0 && grid_levels[grid
 {
 QuadCh.Draw(CouleurGreen.WithAlpha(3*(1.0/255.0)*(grid_levels[grid_selected][gr_st_selected][tempfu])));
 }
-//step précedent, info
+//step prÃ©cedent, info
 if(grid_levels[grid_selected][gr_st_selected-1][tempfu]>0)
 {
 Rect QuadPrev(Vec2D(tmpx,tmpy),Vec2D(5,5));
@@ -494,7 +495,7 @@ QuadNext.Draw(CouleurLigne);
 Rect ShowOffset(Vec2D(0,0),Vec2D(15,15));
 for(int pr=0;pr<6;pr++)
 {
- if( draw_brush_type[pr]==1 && draw_get_gpl[pr]==num_grid_player+1)//si GPL tracké depuis DRAW
+ if( draw_brush_type[pr]==1 && draw_get_gpl[pr]==num_grid_player+1)//si GPL trackÃ© depuis DRAW
  {
  ShowOffset.MoveTo(Vec2D(xb+ (((draw_offset_gpl[pr]-1)%grider_nb_col)*15) , yb+ (((draw_offset_gpl[pr]-1)/grider_nb_col)*15)   ));
  ShowOffset.SetLineWidth(2.0);
@@ -692,7 +693,7 @@ if(window_focus_id==W_GRID && mouse_x>xb+150 && mouse_x<xb+200 && mouse_y>yb+10 
 GriderSt.DrawOutline(CouleurLigne);
 }
 
-//déplacement dans les pas
+//dÃ©placement dans les pas
 previous_button_view(xb+220,yb+10,0);
 next_button_view(xb+250,yb+10,0);
 

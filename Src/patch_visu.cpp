@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 int menu_curve(int XCurv, int YCurv)
 {
 Rect CurveSpace( Vec2D((XCurv),(YCurv)),Vec2D(315,600));
@@ -284,7 +285,7 @@ int maxchan_per_ligne=7;
 int grad=0;
 for (int l=0;l<86;l++)
 {
-if(l==85){maxchan_per_ligne=3;} //derniere ligne à 512
+if(l==85){maxchan_per_ligne=3;} //derniere ligne Ã  512
 
 lignefond.MoveTo( Vec2D(XChan+30,YChan+85+(l*60) - (int)(scroller_patch* scroll_chan)) );
 lignefond.SetRoundness(5);
@@ -296,7 +297,7 @@ lignefond.Draw(CouleurSurvol);
 for (int c=1; c<maxchan_per_ligne;c++)
 {
 
-//on affiche et actionne que si les données sont dans la fenetre
+//on affiche et actionne que si les donnÃ©es sont dans la fenetre
 if(((YChan+100+(l*60) - (int)(scroller_patch* scroll_chan))>YChan+30)&&((YChan+90+(l*60) - (int)(scroller_patch* scroll_chan))<YChan+570))
 {
 grad=c+(l*6);

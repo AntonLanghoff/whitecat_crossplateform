@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 //modes d enregistrement
 const char file_save_preset[24]={"save_personnal_cfg.whc"};
 int save_preset_size=80*4;//bool preset_specify_who_to_save_load[80][4];
@@ -56,7 +57,7 @@ int dock_selected_size=48*6;//bool DockIsSelected[48][6];
 const char file_dock_type[24]={"fader_dock_type.whc"};
 int dock_type_size=48*6;//unsigned char DockTypeIs[48][6];
 const char file_dock_net[24]={"fader_dock_net.whc"};
-int dock_net_size=48*6; //unsigned char DockNetIs[48][6]; // numero Universe artnet(0 à 15)
+int dock_net_size=48*6; //unsigned char DockNetIs[48][6]; // numero Universe artnet(0 Ã  15)
 const char file_dock_name[24]={"fader_dock_name.whc"};
 int dock_name_size=48*6*25;//char DockName[48][6][25];
 const char file_dock_channels[24]={"fader_dock_channels.whc"};
@@ -117,15 +118,15 @@ int fader_echo_size=48*6;//int echo_affected_to_dock[48][6];//
 const char file_dock_color_type[24]={"dockcolor_typ.whc"};
 int dock_color_type_size=8;//bool dock_color_type[8];//0 trichro 1 mode quadri
 const char file_dock_color_xy[24]={"dockcolor_xy.whc"};
-int dock_color_xy_size=8*2;//int x_y_picker_par_colordock[8][2];//stockage des coordonnes du picker par coordonnées
+int dock_color_xy_size=8*2;//int x_y_picker_par_colordock[8][2];//stockage des coordonnes du picker par coordonnÃ©es
 const char file_dock_color_angle[24]={"dockcolor_angle.whc"};
-int dock_color_angle_size=8;//float angle_hue_par_colordock[8];//picker par coordonnées angles
+int dock_color_angle_size=8;//float angle_hue_par_colordock[8];//picker par coordonnÃ©es angles
 const char file_dock_color_picker[24]={"dockcolor_picker.whc"};
 int dock_color_picker_size=8*4;//int picker_trichro[8][4];//stockage des niveaux RVB YELLOW
 const char file_dock_color_ch[24]={"dockcolor_ch.whc"};
 int dock_color_ch_size=8*4*514;//bool dock_color_channels[8][4][514];//trichro sur curcuits
 const char file_dock_color_buffer[24]={"dockcolor_buffer.whc"};
-int dock_color_buffer_size=8*514;//unsigned char dock_color_buffer_C[8][514];//resultat dans buffers separés
+int dock_color_buffer_size=8*514;//unsigned char dock_color_buffer_C[8][514];//resultat dans buffers separÃ©s
 /////VIDEO
 const char file_video_description[24]={"videos_description.whc"};
 int video_description_size=25*64;//char annote_my_video[25][64];
@@ -195,7 +196,7 @@ const char file_mem_exclues[24]={"memories_excluded.whc"};
 int mem_exclues_size=10000;
 
 ///REPORT DE LA CONF FENETRES ALLUMEES / DMX VIEW ETC
-const char file_divers_index[24]={"indexs.whc"};//les indexs dmx_view, fenetres allumées, etc...
+const char file_divers_index[24]={"indexs.whc"};//les indexs dmx_view, fenetres allumÃ©es, etc...
 int index_size=128;
 
 const char file_windows[24]={"windows.whc"};
@@ -251,7 +252,7 @@ int banger_name_size=128*25;//char bangers_name[128][25];//128 bangers
 const char file_bangers_types[24]={"banger_types.whc"};//
 int banger_types_size=128*6;//int bangers_type[128][6];//128 bangers // 6 events par banger
 const char file_bangers_actions[24]={"banger_actions.whc"};//
-int banger_actions_size=128*6;//int bangers_action[128][6];//num action demandée
+int banger_actions_size=128*6;//int bangers_action[128][6];//num action demandÃ©e
 const char file_bangers_values[24]={"banger_values.whc"};//
 int banger_values_size=128*6*2;//int bangers_params[128][6][2];//0 param1 / 1 param2
 const char file_bangers_times[24]={"banger_times.whc"};//
@@ -328,7 +329,7 @@ int kbd_ascii_map_size=128;//int mapping_temporaire[128];//la table de reroutage
 const char file_audio_autoloadpause[24]={"audio_autoloadpause.whc"};//
 int audio_autoloadpause_size=2*4;// bool audio_autoload[4]; bool audio_autopause[4];//
 const char file_audio_filenumber[24]={"audio_filenumber.whc"};//
-int audio_filenumber_size=4;//int player_has_file_coming_from_pos[4];//position 1 à 127
+int audio_filenumber_size=4;//int player_has_file_coming_from_pos[4];//position 1 Ã  127
 const char file_audio_playerposition[24]={"audio_plposition.whc"};//
 int audio_playerposition_size=4;//player_position_on_save[4]
 
@@ -413,7 +414,7 @@ const char file_mover_params[24]={"mover_params.whc"};
 int mover_param_size=32;//int mover_params_adresses[32];
 /////////////GRID////////////////////////////////////////////////////////////////
 
-//les grilles en plusieurs fichiers, beaucoup trop lourds les datas en écriture chargement !
+//les grilles en plusieurs fichiers, beaucoup trop lourds les datas en Ã©criture chargement !
 const char file_grid_levels_1[24]={"grids_levels_1.whc"};
 const char file_grid_levels_2[24]={"grids_levels_2.whc"};
 const char file_grid_levels_3[24]={"grids_levels_3.whc"};
@@ -535,7 +536,7 @@ int draw_chrouting_size=6*500;//int draw_preset_channel_routing[6][500];
 
 //ECHO
 const char file_echo_pointing_fader[24]={"echo_take_fader.whc"};
-int echo_pointing_fader_size=24;//int echo_pointing_fader_num[24];//le fader pointé
+int echo_pointing_fader_size=24;//int echo_pointing_fader_num[24];//le fader pointÃ©
 const char file_echo_echo_mode[24]={"echo_echo_mode.whc"};
 int echo_echo_mode_size=24;//bool echo_is_echo_mode[24];//0= bounce mode 1= continuous Echo mode
 const char file_echo_global_param[24]={"echo_global_specs.whc"};
@@ -606,7 +607,7 @@ else sprintf(string_save_load_report[idf],"Loaded file %s",  file_midi_send_out)
 load_Fader_state_to_midi_array();
 fclose(fpm);
 //REROLL
-strcpy(rep,"");
+sprintf(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 
@@ -768,7 +769,7 @@ int load_core_config()
 	}
 	else
 	{
-	fscanf( cfg_file , "%d / %d / %d / %d / %d / %d / %d /\n"  , &core_user_define_nb_faders, &core_user_define_nb_docks , &core_user_define_nb_chasers,
+	fscanf( cfg_file , "%d / %d / %d / %d / %d / %d / %d / %d %\n"  , &core_user_define_nb_faders, &core_user_define_nb_docks , &core_user_define_nb_chasers,
     &core_user_define_nb_tracks_per_chasers, &core_user_define_nb_gridplayers, &core_user_define_nb_bangers, &core_user_define_nb_echo);
     }
     //deuxieme ligne les args
@@ -800,7 +801,7 @@ return(0);
 int Save_Core_Config()
 {
 FILE *fpp;
-if((fpp=fopen("user/config_core.txt","w")))//etait wb
+if(fpp=fopen("user/config_core.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments: nb_faders / nb_docks / nb_chasers/ nb_tracks per chasers / nb_gridplayers / nb_bangers /\n");
 fprintf(fpp, "%d / %d / %d / %d / %d / %d / %d /\n" , core_user_define_nb_faders, core_user_define_nb_docks ,core_user_define_nb_chasers,
@@ -829,7 +830,7 @@ return(0);
 int Save_onstart_Config()
 {
 FILE *fpp;
-if((fpp=fopen("user/config_onstart.txt","w")))//etait wb
+if(fpp=fopen("user/config_onstart.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments:values 0-1: open camera / open arduino / open iCat server / expert_mode /\n");
 fprintf(fpp, "%d / %d / %d / %d /\n" ,  load_camera_on_start, open_arduino_on_open , enable_iCat, expert_mode);
@@ -848,7 +849,7 @@ return(0);
 int Save_Screen_Config()
 {
 FILE *fpp;
-if((fpp=fopen("user/config_screens.txt","w")))//etait wb
+if(fpp=fopen("user/config_screens.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments: multiplescreen/ borderwindow / fullscreen / largeur_ecran / hauteur_ecran / pos_x / pos_y\n");
 fprintf(fpp, "%d %d %d / %d %d / %d %d\n" ,  index_multiplescreen, index_borderwindow, index_fullscreen, largeur_ecran, hauteur_ecran, posX_mainwindow, posY_mainwindow);
@@ -867,7 +868,7 @@ return(0);
 int Save_Launchpad_RetroLight()
 {
 FILE *fpp;
-if((fpp=fopen("user/launchpad_lighting.txt","w")))//etait wb
+if(fpp=fopen("user/launchpad_lighting.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments: orange / green / yellow / red  / ambre / dark orange /\n");
 fprintf(fpp, "%d / %d  / %d / %d / %d / %d /\n" ,  lch_orange, lch_green, lch_yellow, lch_red, lch_ambre, lch_orange_fonce);
@@ -919,7 +920,7 @@ int save_draw_preset_config()
 {
 
 FILE *fpp;
-if((fpp=fopen("draw_presets_states.txt","w")))//etait wb
+if(fpp=fopen("draw_presets_states.txt","w"))//etait wb
 {
 fprintf(fpp,"#DRAW PRESET CONFIGURATION\n");
 
@@ -992,7 +993,7 @@ return(0);
 int Save_Arduino_Config()//pas en user mais dans un spectacle
 {
 FILE *fpp;
-if((fpp=fopen("arduino.txt","w")))//etait wb
+if(fpp=fopen("arduino.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments:COM PORT / BAUDRATE / REQUEST RATE / MAX IO / MAX ANALOG /\n");
 fprintf(fpp, "%d / %d / %d / %d / %d / %d /\n" ,  arduino_com0, arduino_baud_rate0, ARDUINO_RATE, arduino_max_digital, arduino_max_out_digi, arduino_max_analog );
@@ -1153,7 +1154,7 @@ return(0);
 int Save_setup_conf()
 {
 FILE *fpi;
-if((fpi=fopen("user/general_set_up.txt","w")))//etait wb
+if(fpi=fopen("user/general_set_up.txt","w"))//etait wb
 {
 fprintf(fpi,"#arguments: default step level / level wheel absolute mode / channel check level / dimmer check level / blink on mem change /  midi auto desaffect / dmx view / preloaded sounds / bang stay time\n");
 fprintf(fpi,"%d / %d / %d / %d / %d / %d / %d / %d / %.1f /\n",default_step_level, wheellevel_absolutemode, check_channel_level, dimmer_check_level,
@@ -1172,7 +1173,7 @@ return(0);
 int Save_Plot_Plan_config()
 {
 FILE *fpp;
-if((fpp=fopen("plot_plan_config.txt","w")))//etait wb
+if(fpp=fopen("plot_plan_config.txt","w"))//etait wb
 {
 fprintf(fpp,"#arguments: Name_of_the_plan.jpg\n");
 fprintf(fpp, "%s\n" , Name_of_plane_is);
@@ -1210,7 +1211,7 @@ int Load_Plot_Plan_config()
 	{     sprintf(string_save_load_report[idf],"Error on reading plot_plan_config.txt");b_report_error[idf]=1; 	}
     else {sprintf(string_save_load_report[idf],"plot_plan_config.txt readed");}
 //2eme ligne
-	fscanf( cfg_file , "%s\n" , Name_of_plane_is);
+	fscanf( cfg_file , "%s\n" , &Name_of_plane_is);
 //args
 	if( !fgets( read_buff_winfil, sizeof( read_buff_winfil ) ,cfg_file ) )
 	{
@@ -1294,7 +1295,7 @@ index_report_customs[45]=config_page_is;
 index_report_customs[48]=nbre_track_visualisables;
 index_report_customs[49]=chaser_operator_is;
 index_report_customs[50]=chaser_selected;
-index_report_customs[51]=index_affichage_digit_time_unit;//affichage des unités après virgule
+index_report_customs[51]=index_affichage_digit_time_unit;//affichage des unitÃ©s aprÃ¨s virgule
 index_report_customs[52]=launchpad_chaser_mode;
 index_report_customs[53]=index_enable_edit_chaser;
 index_report_customs[54]=chaser_midi_rows;
@@ -1466,7 +1467,7 @@ int Save_Window_Conf()
 //reset_error_on_save_load();
 
 FILE *fpi;
-if((fpi=fopen("config_windows.txt","w")))//etait wb
+if(fpi=fopen("config_windows.txt","w"))//etait wb
 {
 fprintf(fpi,"#arguments: X Y position of windows: Colors / Numeric / Video / Patch /\n");
 fprintf(fpi,"%d %d / %d %d / %d %d / %d %d /\n",xtrichro_window , ytrichro_window , xnum_window , ynum_window , videoX , videoY, xpatch_window, ypatch_window);
@@ -1557,7 +1558,7 @@ return(0);
 int Save_Sequenciel_Conf()
 {
 FILE *fpo;
-if((fpo=fopen("sequenciel.txt","w")))
+if(fpo=fopen("sequenciel.txt","w"))
 {
 fprintf(fpo,"#arguments: mem_on_stage*10 / mem_on_preset*10 / master_stage / master_preset / speed /\n");
 fprintf(fpo,"%d / %d / %d / %d / %d /\n",position_onstage, position_preset,niveauX1,niveauX2,crossfade_speed);
@@ -1575,7 +1576,7 @@ int Save_audiofiles_cues()
 FILE *fpo;
 char tmp_audio_f[512];
 sprintf(tmp_audio_f,"audio\\%s\\audio_cues_in_out.txt",audio_folder);
-if((fpo=fopen(tmp_audio_f,"w")))
+if(fpo=fopen(tmp_audio_f,"w"))
 {
 fprintf(fpo,"#arguments: audiofilename / cuein / cueout\n");
 for(int i=1;i<127;i++)
@@ -1610,7 +1611,7 @@ int Load_Audio_Conf()
 	if( !fgets( read_buff_winfil , sizeof( read_buff_winfil ) ,cfg_file ) )
 	{     sprintf(string_save_load_report[idf],"Error on reading audio_conf.txt");b_report_error[idf]=1; 	}
     else {sprintf(string_save_load_report[idf],"audio_conf.txt readed");}
-	fscanf( cfg_file , "%s\n" ,  audio_folder);
+	fscanf( cfg_file , "%s\n" ,  &audio_folder);
 	fclose( cfg_file );
     }
 
@@ -1622,7 +1623,7 @@ return(0);
 int Save_Audio_Conf()
 {
 FILE *fpo;
-if((fpo=fopen("audio_conf.txt","w")))
+if(fpo=fopen("audio_conf.txt","w"))
 {
 fprintf(fpo,"#arguments: audiofolder\n");
 fprintf(fpo,"%s\n",audio_folder);
@@ -1654,7 +1655,7 @@ idf=0;
 //sprintf(string_debug,"entree:%s", rep);
 //////////////////////VERSION IS//////////////////////////////////////////////
 FILE *fpo=NULL;
-if((fpo=fopen("whitecat_version.txt","w")))
+if(fpo=fopen("whitecat_version.txt","w"))
 {
 
 fprintf(fpo,"%s\n",versionis);
@@ -1786,7 +1787,7 @@ fclose(fp);
  idf++;
 }
 
-if(specify_who_to_save_load[3]==1) ///////////MEMOIRES: nums de bangers affectés//////////////////////////
+if(specify_who_to_save_load[3]==1) ///////////MEMOIRES: nums de bangers affectÃ©s//////////////////////////
 {
 if ((fp=fopen( file_banger_call_in_mem, "wb"))==NULL)
 { sprintf(string_save_load_report[idf],"Error opening file %s", file_banger_call_in_mem); b_report_error[idf]=1;}
@@ -3734,7 +3735,7 @@ fclose(fp);
 }
 idf++; */
 
-//les grilles paquées en 4 fichiers
+//les grilles paquÃ©es en 4 fichiers
 
 for(int iu=0;iu<32;iu++)
 {
@@ -4571,7 +4572,7 @@ idf++;
 
 
 //reroll
-strcpy(rep,"");
+sprintf(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 
@@ -4581,7 +4582,7 @@ Save_Launchpad_RetroLight();
 if(specify_who_to_save_load[22]==1)
 {Save_audiofiles_cues(); idf++; }
 //reroll
-strcpy(rep,"");
+sprintf(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 detect_error_on_save_load();
@@ -4897,7 +4898,7 @@ if (fread(FaderDirectChan, sizeof(int), fader_direct_chan_size, fp) != fader_dir
 { sprintf(string_save_load_report[idf],"Error Loaded %s",  file_direct_channel);b_report_error[idf]=1;}
 else {sprintf(string_save_load_report[idf],"Loaded file %s", file_direct_channel);}
  fclose(fp);
-//mise à plat d init si souci
+//mise Ã  plat d init si souci
 for(int i=0;i<48;i++)
 {
 for (int j=0;j<6;j++)
@@ -5988,7 +5989,7 @@ else  sprintf(string_save_load_report[idf],"Loaded file %s", file_dock_color_buf
 }
 idf++;
  load_etat_picker_dans_dockcolor(0);//rafraichissement du premier dock color
-  //puis mise à l afihage ok du curseur hue
+  //puis mise Ã  l afihage ok du curseur hue
   vx = cos(angle_snap)*125;
   vy = sin(angle_snap)*125;
   position_curseur_hue_x= xtrichro_window+vx;
@@ -7649,7 +7650,7 @@ show_calc_number[view_plot_calc_number_is]=1;
 LoadWhiteCatColorProfil();// pas de fichiers, juste raffraichissement
 rest(10);
 
-//reroll à garder pour pas larguer midishare
+//reroll Ã  garder pour pas larguer midishare
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 
@@ -7749,5 +7750,7 @@ index_save_global_is=1;
 
 return(0);
 }
+
+
 
 

@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 /* calculates the distance between two curve_nodes */
 fixed curve_node_dist(curve_node n1, curve_node n2)
 {

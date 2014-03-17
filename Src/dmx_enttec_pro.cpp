@@ -40,6 +40,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *   send dmx data and other fonctions to the enttec usb pro, only for windows
 *
  **/
+
 //enttec pro
 //pour code enttec pro:
 #include <process.h>
@@ -169,32 +170,32 @@ int Enttec_Pro_SendData(int label, unsigned char *data, int length, LPOVERLAPPED
 	header[3] = length >> 8;
 
 	res = WriteFile(
-		com_handle_,					//Instance de votre accès au port série
-		(unsigned char *)header,		//Pointeur sur la donnée à écrire
-		4,								//Nombre de bytes à écrire
+		com_handle_,					//Instance de votre accÃ¨s au port sÃ©rie
+		(unsigned char *)header,		//Pointeur sur la donnÃ©e Ã  Ã©crire
+		4,								//Nombre de bytes Ã  Ã©crire
 		&bytes_written,					//pointeur to number of bytes written
-		lpOverlapped					//Doit être NULL pour windows CE
+		lpOverlapped					//Doit Ãªtre NULL pour windows CE
 	);
 	if (!res || (bytes_written != 4)) return -1;
 
 
 	res = WriteFile(
-		com_handle_,					//Instance de votre accès au port série
-		(unsigned char *)data,			//Pointeur sur la donnée à écrire
-		length,							//Nombre de bytes à écrire
+		com_handle_,					//Instance de votre accÃ¨s au port sÃ©rie
+		(unsigned char *)data,			//Pointeur sur la donnÃ©e Ã  Ã©crire
+		length,							//Nombre de bytes Ã  Ã©crire
 		&bytes_written,					//pointeur to number of bytes written
-		lpOverlapped			        //Doit être NULL pour windows CE
+		lpOverlapped			        //Doit Ãªtre NULL pour windows CE
 	);
 	if (!res || (bytes_written != length)) return -1;
 
 
 	unsigned char end_code = 0xE7;
 	res = WriteFile(
-		com_handle_,					//Instance de votre accès au port série
-		(unsigned char *)&end_code,		//Pointeur sur la donnée à écrire
-		1,								//Nombre de bytes à écrire
+		com_handle_,					//Instance de votre accÃ¨s au port sÃ©rie
+		(unsigned char *)&end_code,		//Pointeur sur la donnÃ©e Ã  Ã©crire
+		1,								//Nombre de bytes Ã  Ã©crire
 		&bytes_written,					//pointeur to number of bytes written
-		lpOverlapped					//Doit être NULL pour windows CE
+		lpOverlapped					//Doit Ãªtre NULL pour windows CE
 	);
 	if (!res || (bytes_written != 1)) return -1;
 
@@ -414,7 +415,7 @@ com_handle_IN = NULL;
         {
 			 sprintf(string_display_dmx_params,"Impossible to load DLL");return(0);
         }
-        idmxIN = istheresomeone_in_enttecpro+1;//depart après position enttec pro out
+        idmxIN = istheresomeone_in_enttecpro+1;//depart aprÃ¨s position enttec pro out
         while(idmxIN < 50) {
             DeviceNameLenIN = 80;
             KeyNameLenIN = 100;

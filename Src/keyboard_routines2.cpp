@@ -45,6 +45,9 @@ WWWWWWWW           C  WWWWWWWW   |
 #include <allegro.h>
 
 
+#include <allegro.h>
+
+
 int recall_config_page()
 {
 switch(config_page_is)
@@ -83,7 +86,7 @@ if ( keypressed())
 
 int chi = readkey();
 scan_ascii_is=(chi & 0xff);//prend pas en compte touches fonctions
-scan_allegro_key_is=(chi >> 8);//prend en compte tout le monde mais à redistribuer fr et anglais
+scan_allegro_key_is=(chi >> 8);//prend en compte tout le monde mais Ã  redistribuer fr et anglais
 
 
 switch (chi >> 8)
@@ -122,7 +125,7 @@ sprintf(string_key_id,list_keyname[0]);
 key_switch_window_down();
 break;
 //////////////////SPECIAL KEYS ////////////////////////////////////////////////
-case  KEY_TILDE://carré
+case  KEY_TILDE://carrÃ©
 if(window_focus_id==W_PLOT) {index_move_plot_view_port=toggle(index_move_plot_view_port);}
 break;
 
@@ -216,7 +219,7 @@ reset_indexs_confirmation();
 index_ask_confirm=1;
 index_do_overecord_mem_plus_faders=1;
 }
-else if (key_shifts & KB_SHIFT_FLAG || index_false_shift==1) //creation mémoires en mode merge Faders / seq
+else if (key_shifts & KB_SHIFT_FLAG || index_false_shift==1) //creation mÃ©moires en mode merge Faders / seq
 {
 index_do_dock=0;
 index_do_modify=0;
@@ -245,7 +248,7 @@ break;
 
 case KEY_F5:
               index_type=toggle(index_type);
-              strcpy(numeric,"");numeric_postext=0;
+              sprintf(numeric,"");numeric_postext=0;
 break;
 
 case KEY_F6:
@@ -604,9 +607,8 @@ case KEY_SPACE:
         case KEY_SEMICOLON:
            if(index_type==0)//le M qui est point en clavier americain
            {
-           if ((key_shifts & KB_SHIFT_FLAG) || (index_false_shift==1))
-           { if(index_show_mover_window==0)
-           {add_a_window(W_MOVER);}
+           if (key_shifts & KB_SHIFT_FLAG || index_false_shift==1)
+           { if(index_show_mover_window=0){add_a_window(W_MOVER);}
            else {substract_a_window(W_MOVER);}}
            }
            else if(index_type==1)
@@ -748,7 +750,7 @@ case KEY_SPACE:
             {
             channel_paste();
             }
-            else//si chiffre de mem tapée
+            else//si chiffre de mem tapÃ©e
             {
             index_copy_mem_in=1;
             index_ask_confirm=1;

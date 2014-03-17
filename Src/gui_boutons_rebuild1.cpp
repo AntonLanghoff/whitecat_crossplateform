@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int bouton_on_view(int xp, int yp, bool state)
 {
 Rect On(Vec2D(xp,yp),Vec2D(20,20));
@@ -713,7 +714,7 @@ Command.DrawOutline(CouleurLigne.WithAlpha(0.8));
 break;
 }
 
-if((window_focus_id==0) && (index_over_A_window==0 )|| (window_focus_id==W_MAINMENU) && (mouse_x>xcom) && (mouse_x<xcom+60) && (mouse_y>ycom) && (mouse_y<ycom+20))
+if((window_focus_id==0 && index_over_A_window==0 )|| (window_focus_id==W_MAINMENU) && mouse_x>xcom && mouse_x<xcom+60 && mouse_y>ycom && mouse_y<ycom+20)
 {
 if(Midi_Faders_Affectation_Type!=0 && IDmidi!=1625)
 {show_type_midi(IDmidi, desc);Command.DrawOutline(CouleurBlind);}
@@ -847,7 +848,7 @@ reset_audio_indexs_to_dock();
 break;
 case 34://name
 index_type=toggle(index_type);
-strcpy(numeric,"");numeric_postext=0;
+sprintf(numeric,"");numeric_postext=0;
 break;
 case 35://draw
 if(index_draw_window==0){add_a_window(W_DRAW);substract_a_window(W_MAINMENU);}
@@ -882,7 +883,7 @@ case 44://quit
 index_ask_confirm=1;index_do_quit_with_save=1;
 break;
 /////////////////////////////////////////////////////////////////////////////////
-//extras hors menus déroulants ext
+//extras hors menus dÃ©roulants ext
 case 100:
      plot_index_show_levels=toggle(plot_index_show_levels);
 break;

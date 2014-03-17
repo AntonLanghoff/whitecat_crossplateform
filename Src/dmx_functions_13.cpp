@@ -347,7 +347,7 @@ if(auto_reset_crossfade_speed_on_link==1 && (Links_Memoires[position_onstage]==0
 {crossfade_speed=64;}
 
 crossfade_done_time=0;
-strcpy(string_time_left_is,"");
+sprintf(string_time_left_is,"");
 if(index_link_speed_crossfade_to_gpl1==1)
 {  grid_crossfade_speed[0]=crossfade_speed;
    midi_levels[1508]=crossfade_speed;
@@ -422,7 +422,7 @@ grid_niveauX2[0]=(int)grid_floatX2[0];
 
 if(niveauX1==255 && niveauX2==0)
 {
-crossfade_done_time=0;strcpy(string_time_left_is,"");
+crossfade_done_time=0;sprintf(string_time_left_is,"");
 index_go_back=0;
 if(index_auto_mute_cuelist_speed==1 && crossfade_speed!=64)
 {is_raccrochage_midi_remote[493]=1; }
@@ -570,7 +570,7 @@ int do_lfos()
  }
 
 
- if(faders_in_float[cmptfader]==0.0)//renvoi next dock quand à 0 pos
+ if(faders_in_float[cmptfader]==0.0)//renvoi next dock quand Ã  0 pos
  {
  if(lfo_do_next_step[cmptfader][1]==1)//down dock
  {
@@ -744,7 +744,7 @@ if (is_dock_for_lfo_selected[cmptfader][ dockis]==1 )
  }
  }
 }
-//si pas bouclé, juste une sequence
+//si pas bouclÃ©, juste une sequence
 else if(is_dock_for_lfo_selected[cmptfader][ dockis]==0)
 {
  lfo_cycle_is_on[cmptfader]=0;
@@ -759,7 +759,7 @@ else if(is_dock_for_lfo_selected[cmptfader][ dockis]==0)
   if(FaderLocked[cmptfader]==1 && LockFader_is_FullLevel[cmptfader]==1)//masterisation au lock des autres faders
  {
  DoLock(cmptfader,Fader[cmptfader]);//remasterisation des niveaux
- //changement du niveau de lock, si on l augmente au dessus de son niveau de lock stocké
+ //changement du niveau de lock, si on l augmente au dessus de son niveau de lock stockÃ©
  if(Fader[cmptfader]>StateOfFaderBeforeLock[cmptfader] && FaderIsFlash[cmptfader]==0){StateOfFaderBeforeLock[cmptfader]=Fader[cmptfader];}
  }
  }
@@ -816,7 +816,7 @@ int Merger_Faders()
  }
  break;
  case 1://Exclude rendering
- // rien ne se passe, ne sont pas reportés dans le buffer fader
+ // rien ne se passe, ne sont pas reportÃ©s dans le buffer fader
  break;
  case 2://substract
   switch(fader_fx_route[cif])
@@ -1059,9 +1059,9 @@ index_fader_is_manipulated[f]=1;
            {
              if(ppin<grider_begin_channel_is-1)
              {
-              FaderDockContains[f][d][ppin]=0;//nettoyage à cause de l adressage   si chgt adresse faut nettoyer le buffer
+              FaderDockContains[f][d][ppin]=0;//nettoyage Ã  cause de l adressage   si chgt adresse faut nettoyer le buffer
               }
-             if(ppin+grider_begin_channel_is-1<513)//eviter débordement hors des 513 circuits
+             if(ppin+grider_begin_channel_is-1<513)//eviter dÃ©bordement hors des 513 circuits
              {
              FaderDockContains[f][d][ppin+grider_begin_channel_is-1]=buffer_gridder[(faders_dock_grid_affectation[f][d])][ppin-1];
              }
@@ -1163,7 +1163,7 @@ return(0);
 ////////////////////////////////////////////////////////////////////////////////
 int Merger()
 {
- //rafraichissement visuel, pour pb de synchro entre calculs et rapidité affichage mis en amont d une frame
+ //rafraichissement visuel, pour pb de synchro entre calculs et rapiditÃ© affichage mis en amont d une frame
  for (int i=1;i<514;i++)
  {
  buffer_affichage_valeurs_sequenciel[i]=bufferSequenciel[i];
@@ -1256,7 +1256,7 @@ char read_buff[ 512 ] ;
 	cfg_file = fopen("user\\config_dmx.txt", "rt" );
 	if( !cfg_file )
 	{
-	 printf("\nPb à ouverture de config_dmx.txt\n");
+	 printf("\nPb Ã  ouverture de config_dmx.txt\n");
      return 1;
 	}
 
@@ -1266,7 +1266,7 @@ char read_buff[ 512 ] ;
      sprintf(string_save_load_report[idf],"! config_dmx.txt");
      return 1;
 	}
-	fscanf( cfg_file , "%s\n" ,  motcleinterfaceis );
+	fscanf( cfg_file , "%s\n" ,  &motcleinterfaceis );
 	fscanf( cfg_file , "%d\n" ,  &index_artnet_doubledmx);
 	fclose( cfg_file );
 
@@ -1292,7 +1292,7 @@ else if( myDMXinterfaceis==4){sprintf(motcleinterface,"SUNLITE");}
 FILE *fp;
 char rep_conf_dmx[256];
 sprintf(rep_conf_dmx,"%s\\user\\config_dmx.txt",mondirectory);
-if((fp=fopen(rep_conf_dmx,"w")))
+if(fp=fopen(rep_conf_dmx,"w"))
 {
 fprintf(fp,"#arguments: 1st line:  dmxkeyword / 3rd: artnetwith usb ( 0-1) \n");
 fprintf(fp,"%s\n",motcleinterface);
@@ -1325,4 +1325,3 @@ if(resIn<0)
 
 return(0);
 }
-

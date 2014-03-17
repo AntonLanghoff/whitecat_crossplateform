@@ -74,11 +74,11 @@ if(device==0)
 {
 if(arduino_device_0_is_ignited==1)
 {
-strcpy(arduino_order,"");
+sprintf(arduino_order,"");
 arduino_order[0]='S';arduino_order[1]='D';arduino_order[2]='/';arduino_order[3]='\0';
 //arduino_order[3]='\0';//pour UNO [3]='\0' pour 2009 =0
 int nBytesSendtoArduino=serial0.SendData(arduino_order,4);
-//capture de l'état précédent
+//capture de l'Ã©tat prÃ©cÃ©dent
 for(int y=0;y<=arduino_max_digital;y++)
 {
 previous_digital_data_from_arduino[y]=digital_data_from_arduino[y];
@@ -428,7 +428,7 @@ if(mouse_button==1 && mouse_released==0)
 int valois=atoi(numeric);
 
 ///INPUT/////////////////////////////////////////////////////////////////////
-//data Val1 range pour un input de type fader ( 0 à 11 )
+//data Val1 range pour un input de type fader ( 0 Ã  11 )
 if(
 (arduino_digital_type[position_line_io+y]==1|| arduino_digital_type[position_line_io+y]==2|| arduino_digital_type[position_line_io+y]==7)
 && arduino_digital_function_input[position_line_io+y][0]>=0 && arduino_digital_function_input[position_line_io+y][0]<=11
@@ -437,7 +437,7 @@ if(
 {
 arduino_digital_function_input[position_line_io+y][1]=valois;
 }
-//faire data range pour le picth: 0 à 127
+//faire data range pour le picth: 0 Ã  127
 if(
 (arduino_digital_type[position_line_io+y]==1|| arduino_digital_type[position_line_io+y]==2|| arduino_digital_type[position_line_io+y]==7)
 && ( arduino_digital_function_input[position_line_io+y][0]>=17 || arduino_digital_function_input[position_line_io+y][0]<=32)
@@ -526,7 +526,7 @@ mouse_released=1;
 
 if(position_line_io+y==0)
 {
-sprintf(string_temp_def,"0:Serial %d",position_line_io+y);
+sprintf(string_temp_def,"0:Serial",position_line_io+y);
 sprintf(string_temp_familly,"Rx");
 OverTyp.Draw(CouleurFond);
 petitchiffre.Print(string_temp_familly,cfg_X+293,cfg_Y+43+(y*20));
@@ -535,7 +535,7 @@ petitchiffrerouge.Print(ol::ToString(digital_data_from_arduino[position_line_io+
 }
 if(position_line_io+y==1)
 {
-sprintf(string_temp_def,"1:Serial %d",position_line_io+y);
+sprintf(string_temp_def,"1:Serial",position_line_io+y);
 sprintf(string_temp_familly,"Tx");
 OverTyp.Draw(CouleurFond);
 petitchiffre.Print(string_temp_familly,cfg_X+293,cfg_Y+43+(y*20));
@@ -713,10 +713,10 @@ switch(arduino_digital_function_output[position_line_io+y][0])
 case 0://desafected
 sprintf(string_temp_familly,"-");
 break;
-case 1: //relié à un circuit
+case 1: //reliÃ© Ã  un circuit
 sprintf(string_temp_familly,"Channel >10");
 break;
-case 2://relié à un fader
+case 2://reliÃ© Ã  un fader
 sprintf(string_temp_familly,"Fader >10");
 break;
 }
@@ -733,10 +733,10 @@ switch(arduino_digital_function_output[position_line_io+y][0])
 case 0://desafected
 sprintf(string_temp_familly,"-");
 break;
-case 1: //relié à un circuit
+case 1: //reliÃ© Ã  un circuit
 sprintf(string_temp_familly,"Channel");
 break;
-case 2://relié à un fader
+case 2://reliÃ© Ã  un fader
 sprintf(string_temp_familly,"Fader");
 break;
 }
@@ -923,4 +923,5 @@ petitchiffrerouge.Print(string_Arduino_status,cfg_X+10,cfg_Y+285);
 
 return(0);
 }
+
 

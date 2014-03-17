@@ -40,7 +40,6 @@ WWWWWWWW           C  WWWWWWWW   |
 *   Arduino transfert fonctions to usb via the serial VCOM PORT for opening the port, close it or initialise it.
 *
  **/
-
 #include "serial.cpp"
 CSerial serial0;
 

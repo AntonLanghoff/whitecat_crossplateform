@@ -357,7 +357,7 @@ mouse_released=1;
 }
 }
 
-//les presets de sélections de faders//////////////////////////////////////////////////////////
+//les presets de sÃ©lections de faders//////////////////////////////////////////////////////////
 
 for(int lg=0;lg<8;lg++)
 {
@@ -529,7 +529,7 @@ int dock_selected_is=detect_dock_used(position_minifader_selected);
 if(index_do_dock==0 && index_do_modify==0 && index_do_dock==0   && index_type==0    && index_main_clear==0 )
 {
  minifaders_selected[position_minifader_selected]=toggle(minifaders_selected[position_minifader_selected]);
- if(index_inspekt==1)//affichage qui dans dock si VIEW activé
+ if(index_inspekt==1)//affichage qui dans dock si VIEW activÃ©
  {
  show_who_is_in_dock( position_minifader_selected,   detect_dock_used(position_minifader_selected));
  }
@@ -724,7 +724,7 @@ if( mouse_x>xmf+(cmptfader*larg) && mouse_x<xmf+(cmptfader*larg)+larg && mouse_y
 
 position_minifader_selected=cmptfader+(lfad*24);
 refresh_minifader_state_view_core(cmptfader+(lfad*24));
-if(index_inspekt==1){ //affichage qui dans dock si VIEW activé
+if(index_inspekt==1){ //affichage qui dans dock si VIEW activÃ©
 show_who_is_in_dock( cmptfader+(lfad*24),   detect_dock_used(cmptfader+(lfad*24)));
 }
 set_mouse_range(xmf+(cmptfader*larg), ymf+20+(lfad*hmfd), xmf+(cmptfader*larg)+larg, ymf+20+127+(lfad*hmfd));//pour pas deborder
@@ -733,7 +733,7 @@ if( index_main_clear==0)
 {
 //NIVEAU
 Fader[cmptfader+(lfad*24)]=((ymf+127+20+(lfad*hmfd))-mouse_y)*2;
-midi_levels[cmptfader+(lfad*24)]=((ymf+127+20+(lfad*hmfd))-mouse_y);//desafffceté pour trouver pb
+midi_levels[cmptfader+(lfad*24)]=((ymf+127+20+(lfad*hmfd))-mouse_y);//desafffcetÃ© pour trouver pb
 
 if(Fader[cmptfader+(lfad*24)]>=254){Fader[cmptfader+(lfad*24)]=255;midi_levels[cmptfader+(lfad*24)]=127;}
 

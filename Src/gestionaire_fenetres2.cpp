@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int reset_config_indexes()
 {
 index_config_dmx=0;
@@ -58,7 +59,7 @@ int clear_non_desired_values_in_window_list()
 
 for(int i=0;i<63;i++)
 {
-if(window_opened[i] >max_window_identity_is+1){window_opened[i]=0;} //+1 règle bug de rwanoux et jaques alpha 0.8.3
+if(window_opened[i] >max_window_identity_is+1){window_opened[i]=0;} //+1 rÃ¨gle bug de rwanoux et jaques alpha 0.8.3
 if(window_opened[i] <900){window_opened[i]=0;}
 }
  return(0);
@@ -91,8 +92,8 @@ nbre_windows++;
 int add_a_window(int id)
 {
 
-//nettoyage pour éviter doublons perdus
- for(int i=1;i<63;i++)//0 pas concerné pour ne pas cuter la fenetre sur scène bug christoph banger, jacques, batgg // 1er dec 2012
+//nettoyage pour Ã©viter doublons perdus
+ for(int i=1;i<63;i++)//0 pas concernÃ© pour ne pas cuter la fenetre sur scÃ¨ne bug christoph banger, jacques, batgg // 1er dec 2012
  {
  if(window_opened[i]==id){window_opened[i]=0;}
  }

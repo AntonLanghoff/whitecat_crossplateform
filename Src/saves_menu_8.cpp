@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 int scan_savesfolder()
 {
     struct al_ffblk f;
@@ -55,7 +56,7 @@ int scan_savesfolder()
             {
             isDir=true;
             // check if it's a dir or a file
-            for(unsigned int a=0;a<strlen(f.name);a++)
+            for(int a=0;a<strlen(f.name);a++)
             {
                 if(f.name[a]=='.')
                 {
@@ -82,7 +83,7 @@ int scan_importfolder(char *subdir)
 {
 for(int i=0;i<127;i++)
 {
- strcpy(list_import_files[i],"");
+ sprintf(list_import_files[i],"");
 }
 
     struct al_ffblk f;
@@ -199,7 +200,7 @@ else if(strcmp(importfile_name,"..")==0){scan_importfolder("");line_import=0;}
 else
 {
             // check if it's a dir or a file
-          for(unsigned int a=0;a<strlen(importfile_name);a++)
+          for(int a=0;a<strlen(importfile_name);a++)
           {
            if( importfile_name[a]=='.')
            {
@@ -268,7 +269,7 @@ for (int y=0;y<8;y++)
 Rect OverFile(Vec2D(xrep+5,(yrep+185+(y*20)-10)),Vec2D(200,20));
 OverFile.SetRoundness(7.5);
 
-//affichage qui est selectionné
+//affichage qui est selectionnÃ©
 if(strcmp(importfile_name,list_import_files[importfile_selected])==0 && (importfile_selected==(y+line_import)))
 {OverFile.Draw(CouleurFond.WithAlpha(0.5));}
 
@@ -527,7 +528,7 @@ for (int y=0;y<8;y++)
 {
 Rect OverFile(Vec2D(xrep+5,(yrep+185+(y*20)-10)),Vec2D(200,20));
 OverFile.SetRoundness(7.5);
-//affichage quiest selectionné
+//affichage quiest selectionnÃ©
 if(strcmp(savefile_name,list_save_files[savefile_selected])==0 && (savefile_selected==(y+line_save)))
 {OverFile.Draw(CouleurFond.WithAlpha(0.5));}
 
@@ -690,7 +691,7 @@ if(window_focus_id==W_SAVE && mouse_x>xrep+140 && mouse_x<xrep+210 && mouse_y>yr
 if(mouse_button==1 && mouse_released==0)
 {
 
-if(strcmp(savefile_name,"")!=0)
+if(strcmp(savefile_name,"")==1)
 {
 index_do_loadshow=1;
 index_ask_confirm=1;

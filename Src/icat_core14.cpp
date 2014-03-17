@@ -153,7 +153,7 @@ int numfad=0;
 int aire=0;
 int x1=0;
 int y1=0;
-//envois des données
+//envois des donnÃ©es
 char string_mf_id[16];
 for(int i=1;i<iCat_nbre_de_tracking_zone[iCatPageis]+1;i++)
 {
@@ -186,7 +186,7 @@ case 2://draw"Draw Activ");
 
 if(previous_pos_iCat_tracker[iCatPageis][i][0]!=pos_iCat_tracker[iCatPageis][i][0] || previous_pos_iCat_tracker[iCatPageis][i][1]!=pos_iCat_tracker[iCatPageis][i][1])
 {
-//chaque aire déclarée
+//chaque aire dÃ©clarÃ©e
 for(int lign=0;lign<draw_preset_parameters[draw_preset_selected][1];lign++)
 {
 for(int col=0;col<draw_preset_parameters[draw_preset_selected][0];col++)
@@ -224,7 +224,7 @@ aire=iCat_trackzone_affectation_is[iCatPageis][i]-1;
 
 if(previous_pos_iCat_tracker[iCatPageis][i][0]!=pos_iCat_tracker[iCatPageis][i][0] || previous_pos_iCat_tracker[iCatPageis][i][1]!=pos_iCat_tracker[iCatPageis][i][1])
 {
-//chaque aire déclarée
+//chaque aire dÃ©clarÃ©e
 for(int lign=0;lign<draw_preset_parameters[aire][1];lign++)
 {
 for(int col=0;col<draw_preset_parameters[aire][0];col++)
@@ -365,7 +365,7 @@ case 1://Fader
               }
 
            if(FaderLocked[numfad]==1)
-           //locké
+           //lockÃ©
            { col_fader_r=0.0, col_fader_g=0.4, col_fader_b=0.2; }
            sprintf(StrOrderToiCat,"model level%d color %.1f %.1f %.1f",i, col_fader_r, col_fader_g, col_fader_b);
 
@@ -937,7 +937,7 @@ fis=(constrain_int_data_to_this_range(fis,0,47));
       }
       break;
       default:
-      strcpy(StrOrderToiCat,"");
+      sprintf(StrOrderToiCat,"");
       break;
       }
 
@@ -948,7 +948,7 @@ case 2://minifaders
 int num_mf;
      switch(iCat_affectation_bouton_action_is[iCatPageis][ck])
      {
-//rien a checker dans les états, sauf la sélection déselection de minifaders
+//rien a checker dans les Ã©tats, sauf la sÃ©lection dÃ©selection de minifaders
        case 16:
        num_mf=iCat_affectation_bouton_value_is[iCatPageis][ck]-1;
        if(num_mf>=0 && num_mf<48)
@@ -1292,7 +1292,7 @@ case 7://draw
       else {sprintf(StrOrderToiCat,"model button%d image http://www.le-chat-noir-numerique.fr/iCat/draw_preset_vide.png",ck);}
       nbrbytessendediCat=sendto(sockiCat,  StrOrderToiCat,strlen(StrOrderToiCat)+1,0,(SOCKADDR*)&siniCat,sinsizeiCat);
 
-      //rafraichissement de la page icat des déclarations car les tailles de colonnes les circuits  etc changent !
+      //rafraichissement de la page icat des dÃ©clarations car les tailles de colonnes les circuits  etc changent !
       refresh_icatpage_please=1;;
       }
 
@@ -1415,7 +1415,7 @@ if(FaderLocked[valeur_sl-1]==0)
   }
 }
 else
-{//locké
+{//lockÃ©
   col_fader_r=0.0, col_fader_g=0.4, col_fader_b=0.2;
 }
 
@@ -1980,7 +1980,7 @@ default:
 break;
 }
 
-//affichages connexes: déplcement des affichages, si horizontal
+//affichages connexes: dÃ©plcement des affichages, si horizontal
 if( iCat_orientation_slider[iCatPageis][id]==1)
 {
   sprintf(StrOrderToiCat, "model t%d position %d %d 0",id,(x1*2)+10+(iCatSlidersizeY*ratio_iCat_slider[iCatPageis][id]), (y1*2)+(5*ratio_iCat_slider[iCatPageis][id]));
@@ -2235,7 +2235,7 @@ nbrbytessendediCat=sendto(sockiCat,  StrOrderToiCat,strlen(StrOrderToiCat)+1,0,(
       decalagex=5;
       break;
       case 3:
-      strcpy(string_temp_id,"");
+      sprintf(string_temp_id,"");
       sprintf(StrOrderToiCat,"model button%d image http://www.le-chat-noir-numerique.fr/iCat/jump_off.jpg",id);
       decalagey=30;
       decalagex=5;
@@ -2266,7 +2266,7 @@ nbrbytessendediCat=sendto(sockiCat,  StrOrderToiCat,strlen(StrOrderToiCat)+1,0,(
       decalagex=5;decalagey=5;
       break;
       default:
-      strcpy(string_temp_id,"");
+      sprintf(string_temp_id,"");
       break;
       }
 nbrbytessendediCat=sendto(sockiCat,  StrOrderToiCat,strlen(StrOrderToiCat)+1,0,(SOCKADDR*)&siniCat,sinsizeiCat);
@@ -2641,7 +2641,7 @@ nbrbytessendediCat=sendto(sockiCat,  StrOrderToiCat,strlen(StrOrderToiCat)+1,0,(
 
 
 
-//chaque aire déclarée
+//chaque aire dÃ©clarÃ©e
 for(int lign=0;lign<draw_preset_parameters[draw_preset_selected][1];lign++)
 {
 for(int col=0;col<draw_preset_parameters[draw_preset_selected][0];col++)
@@ -2810,7 +2810,7 @@ break;
 }
 
 
-//carré pourtour
+//carrÃ© pourtour
 sprintf(StrOrderToiCat,"model trackzoneA%d xyz %d %d 0 %d %d 0",id,
 (x1*2), (y1*2),
 (x1*2)+(largeur_trackzone*ratio_iCat_trackzone[iCatPageis][id]),(y1*2));
@@ -2865,7 +2865,7 @@ case 1: //Feedback
       nbrbytessendediCat=sendto(sockiCat,  string_to_send,strlen(string_to_send)+1,0,(SOCKADDR*)&siniCat,sinsizeiCat);
       break;
       default:
-      strcpy(string_to_send,"");
+      sprintf(string_to_send,"");
       break;
       }
 sprintf(string_to_send, "model Str%d position %d %d 0",id,(x1*2), (y1*2)+ ((12*2*ratio_iCat_string[iCatPageis][id])/2));
@@ -2879,7 +2879,7 @@ nbrbytessendediCat=sendto(sockiCat,  string_to_send,strlen(string_to_send)+1,0,(
       //fin feedback
 break;
 case 2: //string sequences
-strcpy(string_to_send,"");
+sprintf(string_to_send,"");
      switch(iCat_affectation_string_action_is[iCatPageis][id])
      {
      case 1://Stage
@@ -3121,7 +3121,7 @@ switch(iCat_affectation_string_type_is[iCatPageis][id])
       sprintf(previous_string_confirmation,string_confirmation);
       break;
       default:
-      strcpy(string_to_send,"");
+      sprintf(string_to_send,"");
       break;
       }
       break;
@@ -3130,7 +3130,7 @@ switch(iCat_affectation_string_type_is[iCatPageis][id])
      if(someone_changed_in_sequences==1)
      {
      //ventilation_temps_vers_char();//pour sytrings din dout etc
-     strcpy(string_to_send,"");
+     sprintf(string_to_send,"");
       switch(iCat_affectation_string_action_is[iCatPageis][id])
       {
       case 1://Stage
@@ -3251,7 +3251,7 @@ switch(iCat_affectation_string_type_is[iCatPageis][id])
       //times changed
       if(someone_changed_in_time_sequences==1)//uniquement affichage time crossfade
       {
-      strcpy(string_to_send,"");
+      sprintf(string_to_send,"");
       switch(iCat_affectation_string_action_is[iCatPageis][id])
       {
       case 1://Stage
@@ -3289,7 +3289,7 @@ return(0);
 int do_refresh_iCat(int iCatPage)
 {
 finished_to_send_orders_to_iCat=0;
-index_false_shift=0; index_false_control=0;//pour éviter les pbs lors des changements de pages avec une commande shift toujours active
+index_false_shift=0; index_false_control=0;//pour Ã©viter les pbs lors des changements de pages avec une commande shift toujours active
 
 //clear models sortis de refresh
 

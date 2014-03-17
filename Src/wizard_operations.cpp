@@ -41,6 +41,8 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
+
 int wizard_calcul_nbre_de_mem()
 {
    nbre_de_mems_manipulees=0;
@@ -112,8 +114,8 @@ Wiz_Times_Memoires[pm][2]=0.0;
 Wiz_Times_Memoires[pm][3]=0.0;
 Wiz_Links_Memoires[pm]=0;
 Wiz_Banger_Memoire[pm]=0;
-strcpy(Wiz_descriptif_memoires[pm],"");
-strcpy(Wiz_annotation_memoires[pm],"");
+sprintf(Wiz_descriptif_memoires[pm],"");
+sprintf(Wiz_annotation_memoires[pm],"");
 Wiz_descriptif_memoires[pm][24]='\0';
 Wiz_annotation_memoires[pm][24]='\0';
 }
@@ -135,9 +137,9 @@ Times_Memoires[pm][2]=0.0;
 Times_Memoires[pm][3]=0.0;
 Links_Memoires[pm]=0;
 Banger_Memoire[pm]=0;
-strcpy(descriptif_memoires[pm],"");
+sprintf(descriptif_memoires[pm],"");
 descriptif_memoires[pm][24]='\0';
-strcpy(annotation_memoires[pm],"");
+sprintf(annotation_memoires[pm],"");
 annotation_memoires[pm][24]='\0';
 }
  return(0);
@@ -187,7 +189,7 @@ sprintf(Wiz_annotation_memoires[pm],annotation_memoires[pm]);
 
 int wizard_inspekt_mem()
 {
-strcpy(tmp_wizbuffer,"");
+sprintf(tmp_wizbuffer,"");
 char tmpw[8];
 
 for (int w=1;w<513;w++)
@@ -210,7 +212,7 @@ strcat(tmp_wizbuffer, tmpw);
 //splittage chaine caracters
 for (int ly=0;ly<36;ly++)
 {
-strcpy(show_buff_wizOUT[ly],"");
+sprintf(show_buff_wizOUT[ly],"");
 for (int by=0;by<71;by++)
 {
 show_buff_wizOUT[ly][by]=tmp_wizbuffer[(ly*71)+by];
@@ -238,9 +240,9 @@ Times_Memoires[pm][2]=0.0;
 Times_Memoires[pm][3]=0.0;
 Links_Memoires[pm]=0;
 Banger_Memoire[pm]=0;
-strcpy(descriptif_memoires[pm],"");
+sprintf(descriptif_memoires[pm],"");
 descriptif_memoires[pm][24]='\0';
-strcpy(annotation_memoires[pm],"");
+sprintf(annotation_memoires[pm],"");
 annotation_memoires[pm][24]='\0';
 }
 //recopie
@@ -310,13 +312,13 @@ Times_Memoires[pm][2]=0.0;
 Times_Memoires[pm][3]=0.0;
 Links_Memoires[pm]=0;
 Banger_Memoire[pm]=0;
-strcpy(descriptif_memoires[pm],"");
+sprintf(descriptif_memoires[pm],"");
 descriptif_memoires[pm][24]='\0';
-strcpy(annotation_memoires[pm],"");
+sprintf(annotation_memoires[pm],"");
 annotation_memoires[pm][24]='\0';
 }
 
-//recopie des memoires à insérer
+//recopie des memoires Ã  insÃ©rer
 int index_mem=0;
 int fin_des_memoires=0;
 for(int look=wizard_from_mem;look<=wizard_to_mem;look++)
@@ -337,7 +339,7 @@ fin_des_memoires=variable_wizard_mem+index_mem;
 }
 }
 //le recopiage et decalage du reste
-//arrondissage index_mem pour garder la logique du numérotage des .
+//arrondissage index_mem pour garder la logique du numÃ©rotage des .
 index_mem/=10;
 index_mem+=1;
 index_mem*=10;
@@ -518,7 +520,7 @@ for(int co=1;co<512;co++)
 {
 if(wizard_buffer_in[co]==1)
 {
-if(Memoires[m][co]>0)//on ne rajoute pas sur un circuit à 0%
+if(Memoires[m][co]>0)//on ne rajoute pas sur un circuit Ã  0%
 {
 switch(dmx_view)
 {
@@ -552,7 +554,7 @@ for(int co=1;co<512;co++)
 {
 if(wizard_buffer_in[co]==1)
 {
-if(Memoires[m][co]>0)//on ne retire pas sur un circuit à 0%
+if(Memoires[m][co]>0)//on ne retire pas sur un circuit Ã  0%
 {
 switch(dmx_view)
 {
@@ -598,7 +600,7 @@ if(wizard_buffer_in[co]==1)
 tmp_buff_wiz[co]=Memoires[m][co];
 please_replace[co]=1;
 Memoires[m][co]=0;
-strcpy(descriptif_projecteurs[co],"");
+sprintf(descriptif_projecteurs[co],"");
 }
 }
 //salve redistribue

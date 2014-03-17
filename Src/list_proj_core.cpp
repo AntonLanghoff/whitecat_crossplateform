@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int do_the_macro_of_the_channel(int the_chan, int num_macro)
 {
 int the_Abanger_num=0;
@@ -52,10 +53,10 @@ break;
 case 1://Bang Banger
 the_Abanger_num=channel_macro_val[the_chan][num_macro][1]-1;
 start_time_for_banger[the_Abanger_num]=actual_time;
-//4 aout 2010 initalisation  un temps plus long par defaut pour faire partir mes évènements
+//4 aout 2010 initalisation  un temps plus long par defaut pour faire partir mes Ã©vÃ¨nements
 end_time_for_banger[the_Abanger_num]=default_time_of_the_bang;
-//reset du banger concerné
-for (int o=0;o<6;o++)//reset des évènements
+//reset du banger concernÃ©
+for (int o=0;o<6;o++)//reset des Ã©vÃ¨nements
 {
 event_sended[the_Abanger_num][o]=0;
 if(bangers_delay[the_Abanger_num][o]>end_time_for_banger[the_Abanger_num])
@@ -688,7 +689,7 @@ mouse_released=1;
 }
 else
 {
-if(index_level_attribue==1)//pour déselection auto
+if(index_level_attribue==1)//pour dÃ©selection auto
 {
 for(int y=1;y<512;y++)
 {

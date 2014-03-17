@@ -780,4 +780,3 @@ petitpetitchiffre.Print("Midi",xcha+527,ycha+67);
 return(0);
 }
 
-

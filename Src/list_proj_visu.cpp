@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int Channel_macros_visu(int xlist, int ylist)
 {
 
@@ -181,7 +182,7 @@ case 16:
 sprintf(titlemacro, "Ch>Fader Num");
 break;
 case 17:
-sprintf(titlemacro, "Ch>Stage");
+sprintf(titlemacro, "Ch>Stage %");
 break;
 default:
 break;
@@ -302,6 +303,8 @@ petitpetitchiffre.Print( ol::ToString(leveltoshowis), (xlist+245),(ylist+50+(25*
 }
 else if(dmx_view==0)
 {
+//old teernaire
+//int leveltoshowis=(int)(((float)(bufferSequenciel[co+line_list_is]>?bufferFaders[co+line_list_is]))/2.55);
 int leveltoshowis;
 if(bufferSequenciel[co+line_list_is]>=bufferFaders[co+line_list_is])
 {

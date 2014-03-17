@@ -41,11 +41,12 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 int do_reset_all_listproj()
 {
 for (int r=0;r<514;r++)
 {
- strcpy(descriptif_projecteurs[r],"");
+ sprintf(descriptif_projecteurs[r],"");
  descriptif_projecteurs[r][0]='\0';
 }
  return(0);
@@ -299,7 +300,7 @@ chdir(rep);
 FILE *fp=NULL;
 
 
-if((fp=fopen(importfile_name,"wt")))
+if(fp=fopen(importfile_name,"wt"))
 {
     fprintf(fp,"MANUFACTURER WHITE CAT (c)CHRISTOPH GUILLERMET\n");
     fprintf(fp,"%s\n",versionis);

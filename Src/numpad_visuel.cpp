@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 int rafraichissement_padwheel()
 {
 angle_snap_pad=(((PIknob*2)+angle_correction_wheel) / 128)*midi_levels[664];

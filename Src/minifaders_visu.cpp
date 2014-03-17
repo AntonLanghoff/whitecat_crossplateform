@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
 **/
 
+
 int draw_sign_up(int xs,int ys)
 {
 Line(Vec2D(xs+12,ys+5),Vec2D(xs+12,ys+20)).Draw(CouleurLigne);//barre milieu vert
@@ -579,7 +580,7 @@ Line(Vec2D(xmf+(24*larg)+76+(lu*25),ymf+(llu*25)+16),Vec2D(xmf+(24*larg)+86+(lu*
 }
 }
 
-//les presets de sélections de faders//////////////////////////////////////////////////////////
+//les presets de sÃ©lections de faders//////////////////////////////////////////////////////////
 petitpetitchiffre.Print("Pst",xmf+(24*larg)+10,ymf+85);
 
 
@@ -759,7 +760,7 @@ case 16://echo
 break;
 }
 }
-else//fader locké
+else//fader lockÃ©
 {
 FaderLittleNiveau.Draw(CouleurLock.WithAlpha(myalpha*2));//couleur en vert emeraude
 if(LockFader_is_FullLevel[cmptfader+(lfad*24)]==1 && actual_master_lock==cmptfader+(lfad*24))

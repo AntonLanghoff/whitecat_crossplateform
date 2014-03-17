@@ -41,6 +41,7 @@ WWWWWWWW           C  WWWWWWWW   |
 *
  **/
 
+
 int generation_Tableau_noms_clavier_FR()
 {
 sprintf(list_keyname[0],"PGDN");
@@ -469,7 +470,7 @@ break;
 return(0);
 }
 
-////////////////////////////////////Fonctions clavier déplacées en fonction indépendantes pour mapping/////////////////////////
+////////////////////////////////////Fonctions clavier dÃ©placÃ©es en fonction indÃ©pendantes pour mapping/////////////////////////
 int key_switch_window_up()
 {
 //solo des fenetres
@@ -484,7 +485,7 @@ if(pos_focus_window>max_window_identity_is){pos_focus_window=900;}
 add_a_window(pos_focus_window);
 }
 
-else//passage dune fenetre à l autre
+else//passage dune fenetre Ã  l autre
 {
 index_to_navigate_between_window++;
 nbre_fenetre_actives=check_nbre_opened_windows();
@@ -511,7 +512,7 @@ if(pos_focus_window>max_window_identity_is){pos_focus_window=900;}
 add_a_window(pos_focus_window);
 }
 
-else//passage dune fenetre à l autre
+else//passage dune fenetre Ã  l autre
 {
 index_to_navigate_between_window--;
 nbre_fenetre_actives=check_nbre_opened_windows();
@@ -564,7 +565,7 @@ if  ( symbol_is_selected[l][u] == 1 &&  symbol_channel_is[l][u] == last_ch_selec
 generate_channel_view_list_from_patched_circuits();
 if(index_patch_affect_is_done==1)//reset de ma string de control
 {
-strcpy(string_monitor_patch,"");
+sprintf(string_monitor_patch,"");
 index_patch_affect_is_done=0;
 }
 
@@ -627,7 +628,7 @@ if(chlevelis<0){chlevelis=0;}
  if(Selected_Channel[ci]==1)
  {
   FaderManipulating=highest_level_comes_from_fader[ci]-1;
-  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrés on the fly
+  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrÃ©s on the fly
   {
    FaderDockContains[FaderManipulating][dock_used_by_fader_is[FaderManipulating]][ci]  =chlevelis;
   }
@@ -674,7 +675,7 @@ iddim=atol(numeric);
 
 if(index_patch_affect_is_done==1)//reset de ma string de control
 {
-strcpy(string_monitor_patch,"");
+sprintf(string_monitor_patch,"");
 index_patch_affect_is_done=0;
 }
 
@@ -885,7 +886,7 @@ for (int i=1;i<513;i++)
  {
 
   FaderManipulating=highest_level_comes_from_fader[i]-1;
-  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrés on the fly
+  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrÃ©s on the fly
   {
   if(dmx_view==0)
   {
@@ -908,7 +909,7 @@ for (int i=1;i<513;i++)
 
 break;
 }
-index_level_attribue=1;//pour déselection lors prochain circuit piqué
+index_level_attribue=1;//pour dÃ©selection lors prochain circuit piquÃ©
 
  return(0);
 }
@@ -982,7 +983,7 @@ for (int i=1;i<513;i++)
  if(Selected_Channel[i]==1)
  {
   FaderManipulating=highest_level_comes_from_fader[i]-1;
-  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrés on the fly
+  if(DockTypeIs[FaderManipulating][dock_used_by_fader_is[FaderManipulating]]==0)//pas les contenus dynamiques, juste les circuits enregistrÃ©s on the fly
   {
   if(dmx_view==0)
   {
@@ -1005,7 +1006,7 @@ for (int i=1;i<513;i++)
 break;
 }
 
-index_level_attribue=1;//pour déselection lors prochain circuit piqué dominique guesdon 10 aout 2010
+index_level_attribue=1;//pour dÃ©selection lors prochain circuit piquÃ© dominique guesdon 10 aout 2010
 return(0);
 }
 
@@ -1020,7 +1021,7 @@ if(key[KEY_LSHIFT]|| index_false_shift==1)
              if( index_patch_window==1 && index_ask_confirm==0)
              {
              patch_unselect_all_dimmers();
-             strcpy(string_monitor_patch,"");
+             sprintf(string_monitor_patch,"");
              index_patch_affect_is_done=0;
              }
 }
@@ -1079,7 +1080,7 @@ int key_thruth()
             {
             char * pch;
             pch = strstr(string_monitor_patch, " TO ");
-            if(pch!=0){strcpy(string_monitor_patch,"");}
+            if(pch!=0){sprintf(string_monitor_patch,"");}
             else
             {
             strcat(string_monitor_patch," TO ");
@@ -1203,7 +1204,7 @@ else
            else if(Selected_Channel[ci]==1  && index_blind==1)    {bufferBlind[ci]=255;}
            }
 sprintf(string_Last_Order,">> Selection AT FULL");
-index_level_attribue=1;//pour déselection lors prochain circuit piqué
+index_level_attribue=1;//pour dÃ©selection lors prochain circuit piquÃ©
 }
  return(0);
 }
@@ -1314,7 +1315,7 @@ int key_at_zero()
            else if(Selected_Channel[ci]==1  && index_blind==1)    {bufferBlind[ci]=0;}
            }
            sprintf(string_Last_Order,">> Selection AT ZERO");
-           index_level_attribue=1;//pour déselection lors prochain circuit piqué
+           index_level_attribue=1;//pour dÃ©selection lors prochain circuit piquÃ©
  }
  return(0);
 }
@@ -1404,7 +1405,7 @@ int key_backward()
            refresh_mem_onpreset(position_preset);
            niveauX2=0;
            }
-           strcpy(string_time_left_is,"");
+           sprintf(string_time_left_is,"");
            someone_changed_in_sequences=1;//icat
 return(0);
 }
@@ -1434,7 +1435,7 @@ int key_forward()
            refresh_mem_onpreset(position_preset);
            niveauX2=0;
            }
-           strcpy(string_time_left_is,"");
+           sprintf(string_time_left_is,"");
            someone_changed_in_sequences=1;//icat
  return(0);
 }

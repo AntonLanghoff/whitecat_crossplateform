@@ -45,6 +45,7 @@ WWWWWWWW           C  WWWWWWWW   |
 #include "opencv/cv.h"
 #include "opencv/highgui.h"
 
+
 CvCapture* g_capture = NULL;
 IplImage* frame;
 IplImage* affichage;
@@ -72,13 +73,13 @@ int Load_Video_Conf()
 	video_file = fopen("user\\config_video.txt", "rt" );
 	if( !video_file )
 	{
-	 printf("\nPb à ouverture de config_video.txt\n");
+	 printf("\nPb Ã  ouverture de config_video.txt\n");
      return 1;
 	}
 //premiere ligne les args
 	if( !fgets( read_buff_vid , sizeof( read_buff_vid ) ,video_file ) )
 	{
-     printf("\nErreur lors de la lecture de la première ligne de commentaires\n");
+     printf("\nErreur lors de la lecture de la premiÃ¨re ligne de commentaires\n");
      return 1;
 	}
 	fscanf( video_file , "%d %d %d\n" ,  &video_size_x , &video_size_y, &fps_video_rate);
@@ -102,7 +103,7 @@ return(0);
 int Save_Video_Conf()
 {
 FILE *fph;
-if((fph=fopen("user//config_video.txt","w")))
+if(fph=fopen("user//config_video.txt","w"))
 {
 fprintf(fph,"#arguments: size of image X size of image Y - Video Rate");
 fprintf(fph,"\n%d %d %d",video_size_x,video_size_y, fps_video_rate);
