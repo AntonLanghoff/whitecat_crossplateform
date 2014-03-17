@@ -226,7 +226,7 @@ fscanf( cfg_file , "%d %d \n" ,  &index_broadcast , &Univers  );
 /* on saute la ligne de commentaire */
 fgets( read_buff , sizeof( read_buff ) , cfg_file );
 //deuxieme ligne des args
-fscanf( cfg_file  , "%s\n" , &ip_artnet );
+fscanf( cfg_file  , "%s\n" , ip_artnet );
 
 fclose( cfg_file );
 return(0);
@@ -238,7 +238,7 @@ int save_artnet_conf()
 FILE *fp;
 char rep_conf_dmx[256];
 sprintf(rep_conf_dmx,"%s\\user\\config_artnet.txt",mondirectory);
-if(fp=fopen(rep_conf_dmx,"w"))
+if((fp=fopen(rep_conf_dmx,"w")))
 {
 fprintf(fp,"#arguments: broadcast (1) ou unicast (0) // puis Univers Dmx surlequel envoyer ( 0 Ã  15)");
 fprintf(fp,"\n%d %d",index_broadcast,Univers);

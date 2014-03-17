@@ -182,7 +182,7 @@ case 16:
 sprintf(titlemacro, "Ch>Fader Num");
 break;
 case 17:
-sprintf(titlemacro, "Ch>Stage %");
+sprintf(titlemacro, "Ch>Stage");
 break;
 default:
 break;

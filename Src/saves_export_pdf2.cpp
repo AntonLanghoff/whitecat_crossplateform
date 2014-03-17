@@ -4582,34 +4582,34 @@ case 1: //fader up
 sprintf(little_header,"Fader %d UP", arduino_digital_function_input[i][1]);
 break;
 case 2://fader down
-sprintf(little_header,"Fader: DOWN", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d DOWN", arduino_digital_function_input[i][1]);
 break;
 case 3://Fader saw
-sprintf(little_header,"Fader: SAW", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d SAW", arduino_digital_function_input[i][1]);
 break;
 case 4:
-sprintf(little_header,"Fader: ToPREVDock", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d ToPREVDock", arduino_digital_function_input[i][1]);
 break;
 case 5:
-sprintf(little_header,"Fader: ToNEXTDock", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d ToNEXTDock", arduino_digital_function_input[i][1]);
 break;
 case 6:
-sprintf(little_header,"Fader: Up/Down", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d Up/Down", arduino_digital_function_input[i][1]);
 break;
 case 7:
-sprintf(little_header,"Fader: LOCK", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d LOCK", arduino_digital_function_input[i][1]);
 break;
 case 8:
-sprintf(little_header,"Fader: FLASH", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d FLASH", arduino_digital_function_input[i][1]);
 break;
 case 9:
-sprintf(little_header,"Fader: All at 0", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d All at 0", arduino_digital_function_input[i][1]);
 break;
 case 10:
-sprintf(little_header,"Fader: L/Unloop dock", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d L/Unloop dock", arduino_digital_function_input[i][1]);
 break;
 case 11:
-sprintf(little_header,"Fader: L/Unloop all", arduino_digital_function_input[i][1]);
+sprintf(little_header,"Fader: %d L/Unloop all", arduino_digital_function_input[i][1]);
 break;
 case 12:
 sprintf(little_header,"Seq: GO");

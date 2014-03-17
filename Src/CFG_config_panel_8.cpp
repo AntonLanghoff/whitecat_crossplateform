@@ -1342,7 +1342,7 @@ int save_network_settings()
 FILE *fp;
 char rep_conf_ntwk[256];
 sprintf(rep_conf_ntwk,"%s\\user\\config_network.txt",mondirectory);
-if(fp=fopen(rep_conf_ntwk,"w"))
+if((fp=fopen(rep_conf_ntwk,"w")))
 {
 
 fprintf(fp,"#arguments: Receive art-net Socket  \n");
@@ -1384,11 +1384,11 @@ char read_buff[ 512 ] ;
      sprintf(string_save_load_report[idf],"! config_network.txt");
      return 1;
 	}
-	fscanf( cfg_file , "%s\n" ,  &IP_artnet_IN );
+	fscanf( cfg_file , "%s\n" ,  IP_artnet_IN );
 
 	fgets( read_buff , sizeof( read_buff ) ,cfg_file );
 
-	fscanf( cfg_file , "%s\n" ,  &IP_artnet_OUT );
+	fscanf( cfg_file , "%s\n" ,  IP_artnet_OUT );
 
 	fgets( read_buff , sizeof( read_buff ) ,cfg_file );
 
@@ -1396,11 +1396,11 @@ char read_buff[ 512 ] ;
 
 	fgets( read_buff , sizeof( read_buff ) ,cfg_file );
 
-	fscanf( cfg_file , "%s\n" ,  &IP_fantastick );
+	fscanf( cfg_file , "%s\n" ,  IP_fantastick );
 
 	fgets( read_buff , sizeof( read_buff ) ,cfg_file );
 
-	fscanf( cfg_file , "%s\n" ,  &specified_fs_ip );
+	fscanf( cfg_file , "%s\n" ,  specified_fs_ip );
 
 	fgets( read_buff , sizeof( read_buff ) ,cfg_file );
 

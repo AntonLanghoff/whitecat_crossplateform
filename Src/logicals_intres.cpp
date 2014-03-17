@@ -497,7 +497,7 @@ sprintf(string_confirmation,"Clear Track %d Chaser %d ?",track_selected_for_reco
 }
 else if(index_do_clear_chaser==1)
 {
-sprintf(string_confirmation,"Clear completely Chaser %d ?",track_selected_for_record+1,chaser_selected_for_record+1 );
+sprintf(string_confirmation,"Clear completely Chaser %d ?",chaser_selected_for_record+1 );
 }
 
 
@@ -568,7 +568,7 @@ break;
 //GRID
 else if(index_clear_a_grid_step==1)
 {
-sprintf(string_confirmation,"Clear Step in Grid %d?",step_grid_to_clear+1, grid_to_clear+1 );
+sprintf(string_confirmation,"Clear Step %d in Grid %d?",step_grid_to_clear+1, grid_to_clear+1 );
 }
 
 else if(index_clear_a_grid==1)
@@ -727,11 +727,11 @@ break;
 case 1:
        if(channel_view_type_of_behaviour[channel_view_is]==0)//mem + faders
      {
-      sprintf(string_confirmation,"Build Channel View from ALL mems and faders? ",channel_view_is+1);
+      sprintf(string_confirmation,"Build Channel View %d from ALL mems and faders? ",channel_view_is+1);
       }
       else if(channel_view_type_of_behaviour[channel_view_is]==1)//mem
      {
-      sprintf(string_confirmation,"Build Channel View from ALL mems ? ",channel_view_is+1);
+      sprintf(string_confirmation,"Build Channel View %d from ALL mems ? ",channel_view_is+1);
       }
      else if(channel_view_type_of_behaviour[channel_view_is]==2)//fader
      {

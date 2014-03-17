@@ -526,7 +526,7 @@ mouse_released=1;
 
 if(position_line_io+y==0)
 {
-sprintf(string_temp_def,"0:Serial",position_line_io+y);
+sprintf(string_temp_def,"0:Serial");
 sprintf(string_temp_familly,"Rx");
 OverTyp.Draw(CouleurFond);
 petitchiffre.Print(string_temp_familly,cfg_X+293,cfg_Y+43+(y*20));
@@ -535,7 +535,7 @@ petitchiffrerouge.Print(ol::ToString(digital_data_from_arduino[position_line_io+
 }
 if(position_line_io+y==1)
 {
-sprintf(string_temp_def,"1:Serial",position_line_io+y);
+sprintf(string_temp_def,"1:Serial");
 sprintf(string_temp_familly,"Tx");
 OverTyp.Draw(CouleurFond);
 petitchiffre.Print(string_temp_familly,cfg_X+293,cfg_Y+43+(y*20));

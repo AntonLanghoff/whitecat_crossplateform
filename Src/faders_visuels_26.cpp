@@ -216,7 +216,7 @@ else
 }
 else if(mouse_released==1 && FaderIsFlash[cmptfader]==1 )
 {
-FaderIsFlash[cmptfader]=0; midi_levels[900+cmptfader]==0;
+FaderIsFlash[cmptfader]=0; midi_levels[900+cmptfader]=0;
 }
 
 //FIN BLOCK FLASH
@@ -242,7 +242,7 @@ if(window_focus_id==W_FADERS)
 
 if( Midi_Faders_Affectation_Type!=0)
 {
-if( mouse_x>x+(cmptfader*espacement)-5 && mouse_x<x+(cmptfader*espacement)+132 & mouse_y>y+375 && mouse_y<y+400)
+if( (mouse_x>x+(cmptfader*espacement)-5) && ((mouse_x<x+(cmptfader*espacement)+132) & (mouse_y>y+375)) && (mouse_y<y+400))
 {LFOSpeedFrame.DrawOutline(CouleurBlind);LFOSpeed.Draw(CouleurBlind);}
 else if(mouse_x> (x+(cmptfader*espacement)-6) && mouse_x<(x+(cmptfader*espacement)+19) && mouse_y>(y+320) && mouse_y<(y+345) )
 {GlobalBut.MoveTo(Vec2D(x+(cmptfader*espacement)-6, y+320));  GlobalBut.DrawOutline(CouleurBlind);    }

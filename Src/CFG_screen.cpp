@@ -68,7 +68,7 @@ YGConfig=windows_position[9][1];
 XConfirm=windows_position[10][0];
 YConfirm=windows_position[10][1];
 
-grider_window_x=windows_position[11][0];
+grider_window_x==windows_position[11][0];
 grider_window_y==windows_position[11][1];
 x_plot=windows_position[12][0];
 y_plot=windows_position[12][1];
@@ -77,7 +77,7 @@ window_cfgX=windows_position[13][0];
 window_cfgY=windows_position[13][1];
 Xwizard=windows_position[14][0];
 Ywizard=windows_position[14][1];
-xMinifaders=windows_position[15][0];
+xMinifaders==windows_position[15][0];
 yMinifaders==windows_position[15][1];
 Xchasers=windows_position[16][0];
 Ychasers=windows_position[16][1];

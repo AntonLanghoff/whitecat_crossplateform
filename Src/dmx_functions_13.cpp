@@ -1266,7 +1266,7 @@ char read_buff[ 512 ] ;
      sprintf(string_save_load_report[idf],"! config_dmx.txt");
      return 1;
 	}
-	fscanf( cfg_file , "%s\n" ,  &motcleinterfaceis );
+	fscanf( cfg_file , "%s\n" ,  motcleinterfaceis );
 	fscanf( cfg_file , "%d\n" ,  &index_artnet_doubledmx);
 	fclose( cfg_file );
 
@@ -1292,7 +1292,7 @@ else if( myDMXinterfaceis==4){sprintf(motcleinterface,"SUNLITE");}
 FILE *fp;
 char rep_conf_dmx[256];
 sprintf(rep_conf_dmx,"%s\\user\\config_dmx.txt",mondirectory);
-if(fp=fopen(rep_conf_dmx,"w"))
+if((fp=fopen(rep_conf_dmx,"w")))
 {
 fprintf(fp,"#arguments: 1st line:  dmxkeyword / 3rd: artnetwith usb ( 0-1) \n");
 fprintf(fp,"%s\n",motcleinterface);

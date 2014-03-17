@@ -249,7 +249,7 @@ int vfader=0;
 for(int p=0;p<=arduino_max_digital;p++)
 {
 
-if(arduino_digital_type[p]==1||arduino_digital_type[p]==2||arduino_digital_type[p]==7  && digital_data_from_arduino[p]!= previous_digital_data_from_arduino[p] )//si l'affectation est type INPUT
+if((arduino_digital_type[p]==1||arduino_digital_type[p]==2||arduino_digital_type[p]==7 ) && (digital_data_from_arduino[p]!= previous_digital_data_from_arduino[p]) )//si l'affectation est type INPUT
 //et qu il y a une différence d'état
 {
 switch(arduino_digital_function_input[p][0])

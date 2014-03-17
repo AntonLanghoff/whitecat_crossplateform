@@ -103,7 +103,7 @@ return(0);
 int Save_Video_Conf()
 {
 FILE *fph;
-if(fph=fopen("user//config_video.txt","w"))
+if((fph=fopen("user//config_video.txt","w")))
 {
 fprintf(fph,"#arguments: size of image X size of image Y - Video Rate");
 fprintf(fph,"\n%d %d %d",video_size_x,video_size_y, fps_video_rate);

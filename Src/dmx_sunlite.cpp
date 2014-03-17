@@ -70,13 +70,13 @@ int open_sunlite()
   hLibSunlite = LoadLibrary("DasHard2006.dll");
  if (hLibSunlite == NULL)
  {
-     sprintf(string_display_dmx_params,"Impossible to load sunlite DLL: %s", hLibSunlite);
+     sprintf(string_display_dmx_params,"Impossible to load sunlite DLL: DasHard2006.dll");
  }
 
  dasusbcommand = (DasUsbCommand) GetProcAddress(hLibSunlite, "DasUsbCommand");
  if (dasusbcommand == NULL)
  {
-    sprintf(string_display_dmx_params,"Impossible to Get ProcAdress DASHARD: %d",dasusbcommand );
+    sprintf(string_display_dmx_params,"Impossible to Get ProcAdress DASHARD: DasUsbCommand");
   }
 //open device
 

@@ -59,7 +59,7 @@ next_button_view(xb+60,yb,0);
 if(window_focus_id==926 )
 {
  //Step minus
-if(window_focus_id==W_GRID &&  mouse_x>xb & mouse_x<xb+20 && mouse_y>yb && mouse_y<yb+20 )
+if((window_focus_id==W_GRID) &&  ((mouse_x>xb) & (mouse_x<xb+20)) && (mouse_y>yb) && (mouse_y<yb+20))
 {
  if(Midi_Faders_Affectation_Type!=0)
 {
@@ -76,7 +76,7 @@ if(mouse_b&1 )
 }
 }
 //Step plus
-if(window_focus_id==W_GRID && mouse_x>xb+60 & mouse_x<xb+80 && mouse_y>yb && mouse_y<yb+20 )
+if((window_focus_id==W_GRID) && ((mouse_x>xb+60) & (mouse_x<xb+80)) && (mouse_y>yb) && (mouse_y<yb+20))
 {
 if(Midi_Faders_Affectation_Type!=0)
 {
@@ -106,7 +106,7 @@ if( Midi_Faders_Affectation_Type!=0)
  }
 }
 //chargement d'un pas, ou affectation d'un temps ou clear  du pas
-if(window_focus_id==W_GRID && mouse_x>xb+22 & mouse_x<xb+57 && mouse_y>yb-5 && mouse_y<yb-25 )
+if((window_focus_id==W_GRID) && ((mouse_x>xb+22) & (mouse_x<xb+57)) && (mouse_y>yb-5) && (mouse_y<yb-25))
 {
 StepB.DrawOutline(CouleurLigne);
 if( Midi_Faders_Affectation_Type!=0)
