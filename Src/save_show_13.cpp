@@ -800,7 +800,7 @@ return(0);
 int Save_Core_Config()
 {
 FILE *fpp;
-if(fpp=fopen("user/config_core.txt","w"))//etait wb
+if((fpp=fopen("user/config_core.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments: nb_faders / nb_docks / nb_chasers/ nb_tracks per chasers / nb_gridplayers / nb_bangers /\n");
 fprintf(fpp, "%d / %d / %d / %d / %d / %d / %d /\n" , core_user_define_nb_faders, core_user_define_nb_docks ,core_user_define_nb_chasers,
@@ -829,7 +829,7 @@ return(0);
 int Save_onstart_Config()
 {
 FILE *fpp;
-if(fpp=fopen("user/config_onstart.txt","w"))//etait wb
+if((fpp=fopen("user/config_onstart.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments:values 0-1: open camera / open arduino / open iCat server / expert_mode /\n");
 fprintf(fpp, "%d / %d / %d / %d /\n" ,  load_camera_on_start, open_arduino_on_open , enable_iCat, expert_mode);
@@ -848,7 +848,7 @@ return(0);
 int Save_Screen_Config()
 {
 FILE *fpp;
-if(fpp=fopen("user/config_screens.txt","w"))//etait wb
+if((fpp=fopen("user/config_screens.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments: multiplescreen/ borderwindow / fullscreen / largeur_ecran / hauteur_ecran / pos_x / pos_y\n");
 fprintf(fpp, "%d %d %d / %d %d / %d %d\n" ,  index_multiplescreen, index_borderwindow, index_fullscreen, largeur_ecran, hauteur_ecran, posX_mainwindow, posY_mainwindow);
@@ -867,7 +867,7 @@ return(0);
 int Save_Launchpad_RetroLight()
 {
 FILE *fpp;
-if(fpp=fopen("user/launchpad_lighting.txt","w"))//etait wb
+if((fpp=fopen("user/launchpad_lighting.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments: orange / green / yellow / red  / ambre / dark orange /\n");
 fprintf(fpp, "%d / %d  / %d / %d / %d / %d /\n" ,  lch_orange, lch_green, lch_yellow, lch_red, lch_ambre, lch_orange_fonce);
@@ -919,7 +919,7 @@ int save_draw_preset_config()
 {
 
 FILE *fpp;
-if(fpp=fopen("draw_presets_states.txt","w"))//etait wb
+if((fpp=fopen("draw_presets_states.txt","w")))//etait wb
 {
 fprintf(fpp,"#DRAW PRESET CONFIGURATION\n");
 
@@ -992,7 +992,7 @@ return(0);
 int Save_Arduino_Config()//pas en user mais dans un spectacle
 {
 FILE *fpp;
-if(fpp=fopen("arduino.txt","w"))//etait wb
+if((fpp=fopen("arduino.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments:COM PORT / BAUDRATE / REQUEST RATE / MAX IO / MAX ANALOG /\n");
 fprintf(fpp, "%d / %d / %d / %d / %d / %d /\n" ,  arduino_com0, arduino_baud_rate0, ARDUINO_RATE, arduino_max_digital, arduino_max_out_digi, arduino_max_analog );
@@ -1153,7 +1153,7 @@ return(0);
 int Save_setup_conf()
 {
 FILE *fpi;
-if(fpi=fopen("user/general_set_up.txt","w"))//etait wb
+if((fpi=fopen("user/general_set_up.txt","w")))//etait wb
 {
 fprintf(fpi,"#arguments: default step level / level wheel absolute mode / channel check level / dimmer check level / blink on mem change /  midi auto desaffect / dmx view / preloaded sounds / bang stay time\n");
 fprintf(fpi,"%d / %d / %d / %d / %d / %d / %d / %d / %.1f /\n",default_step_level, wheellevel_absolutemode, check_channel_level, dimmer_check_level,
@@ -1172,7 +1172,7 @@ return(0);
 int Save_Plot_Plan_config()
 {
 FILE *fpp;
-if(fpp=fopen("plot_plan_config.txt","w"))//etait wb
+if((fpp=fopen("plot_plan_config.txt","w")))//etait wb
 {
 fprintf(fpp,"#arguments: Name_of_the_plan.jpg\n");
 fprintf(fpp, "%s\n" , Name_of_plane_is);
@@ -1466,7 +1466,7 @@ int Save_Window_Conf()
 //reset_error_on_save_load();
 
 FILE *fpi;
-if(fpi=fopen("config_windows.txt","w"))//etait wb
+if((fpi=fopen("config_windows.txt","w")))//etait wb
 {
 fprintf(fpi,"#arguments: X Y position of windows: Colors / Numeric / Video / Patch /\n");
 fprintf(fpi,"%d %d / %d %d / %d %d / %d %d /\n",xtrichro_window , ytrichro_window , xnum_window , ynum_window , videoX , videoY, xpatch_window, ypatch_window);
@@ -1557,7 +1557,7 @@ return(0);
 int Save_Sequenciel_Conf()
 {
 FILE *fpo;
-if(fpo=fopen("sequenciel.txt","w"))
+if((fpo=fopen("sequenciel.txt","w")))
 {
 fprintf(fpo,"#arguments: mem_on_stage*10 / mem_on_preset*10 / master_stage / master_preset / speed /\n");
 fprintf(fpo,"%d / %d / %d / %d / %d /\n",position_onstage, position_preset,niveauX1,niveauX2,crossfade_speed);
@@ -1575,7 +1575,7 @@ int Save_audiofiles_cues()
 FILE *fpo;
 char tmp_audio_f[512];
 sprintf(tmp_audio_f,"audio\\%s\\audio_cues_in_out.txt",audio_folder);
-if(fpo=fopen(tmp_audio_f,"w"))
+if((fpo=fopen(tmp_audio_f,"w")))
 {
 fprintf(fpo,"#arguments: audiofilename / cuein / cueout\n");
 for(int i=1;i<127;i++)
@@ -1622,7 +1622,7 @@ return(0);
 int Save_Audio_Conf()
 {
 FILE *fpo;
-if(fpo=fopen("audio_conf.txt","w"))
+if((fpo=fopen("audio_conf.txt","w")))
 {
 fprintf(fpo,"#arguments: audiofolder\n");
 fprintf(fpo,"%s\n",audio_folder);
@@ -1654,7 +1654,7 @@ idf=0;
 //sprintf(string_debug,"entree:%s", rep);
 //////////////////////VERSION IS//////////////////////////////////////////////
 FILE *fpo=NULL;
-if(fpo=fopen("whitecat_version.txt","w"))
+if((fpo=fopen("whitecat_version.txt","w")))
 {
 
 fprintf(fpo,"%s\n",versionis);
@@ -4571,7 +4571,7 @@ idf++;
 
 
 //reroll
-sprintf(rep,"");
+strcpy(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 
@@ -4581,7 +4581,7 @@ Save_Launchpad_RetroLight();
 if(specify_who_to_save_load[22]==1)
 {Save_audiofiles_cues(); idf++; }
 //reroll
-sprintf(rep,"");
+strcpy(rep,"");
 sprintf(rep,"%s",mondirectory);
 chdir (rep);
 detect_error_on_save_load();

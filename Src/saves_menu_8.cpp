@@ -55,7 +55,7 @@ int scan_savesfolder()
             {
             isDir=true;
             // check if it's a dir or a file
-            for(int a=0;a<strlen(f.name);a++)
+            for(unsigned int a=0;a<strlen(f.name);a++)
             {
                 if(f.name[a]=='.')
                 {
@@ -199,7 +199,7 @@ else if(strcmp(importfile_name,"..")==0){scan_importfolder("");line_import=0;}
 else
 {
             // check if it's a dir or a file
-          for(int a=0;a<strlen(importfile_name);a++)
+          for(unsigned int a=0;a<strlen(importfile_name);a++)
           {
            if( importfile_name[a]=='.')
            {

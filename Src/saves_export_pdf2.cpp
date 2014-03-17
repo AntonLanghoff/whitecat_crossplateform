@@ -570,7 +570,7 @@ HPDF_Page_SetRGBStroke (page, 0.0, 0.7, 0.7);//couleur ligne
 HPDF_Page_BeginText (page);
 HPDF_Page_SetFontAndSize (page, def_font, 10);
 HPDF_Page_EndText (page);
-sprintf(header_export,"");
+strcpy(header_export,"");
 
 
 sprintf(header_export,"Draw Matrix: %d",pr +1);
@@ -4733,7 +4733,7 @@ verification_fin_de_page();
 
 for(int i=0;i<=arduino_max_analog;i++)
 {
-sprintf(header_export,"");
+strcpy(header_export,"");
 switch(arduino_analog_function_input[i])
 {
 case 0://desafected

@@ -422,7 +422,7 @@ grid_niveauX2[0]=(int)grid_floatX2[0];
 
 if(niveauX1==255 && niveauX2==0)
 {
-crossfade_done_time=0;sprintf(string_time_left_is,"");
+crossfade_done_time=0;strcpy(string_time_left_is,"");
 index_go_back=0;
 if(index_auto_mute_cuelist_speed==1 && crossfade_speed!=64)
 {is_raccrochage_midi_remote[493]=1; }
@@ -1292,7 +1292,7 @@ else if( myDMXinterfaceis==4){sprintf(motcleinterface,"SUNLITE");}
 FILE *fp;
 char rep_conf_dmx[256];
 sprintf(rep_conf_dmx,"%s\\user\\config_dmx.txt",mondirectory);
-if(fp=fopen(rep_conf_dmx,"w"))
+if((fp=fopen(rep_conf_dmx,"w")))
 {
 fprintf(fp,"#arguments: 1st line:  dmxkeyword / 3rd: artnetwith usb ( 0-1) \n");
 fprintf(fp,"%s\n",motcleinterface);

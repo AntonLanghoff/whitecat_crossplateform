@@ -458,7 +458,7 @@ case 0://REBUILD
      if(mod==mode_rebuild){choose_mode_rebuild.DrawOutline(CouleurLevel); }
      if(window_focus_id==W_WIZARD &&mouse_x>xb+300 && mouse_x<xb+330 && mouse_y> yb+200+(wizard_action_mem*30)+(mod*20) && mouse_y<yb+215+(wizard_action_mem*30)+(mod*20))
      {
-     if(mouse_button=1 && mouse_released==0)
+     if((mouse_button==1) && (mouse_released==0))
      {
      mode_rebuild=mod;
      mouse_released=1;

@@ -276,7 +276,7 @@ int scan_planfolder()//plot
             {
             isSomeone=true; // we've found a directory!
             bool index_check_is_supported=0;
-            for(int a=0;a<strlen(f.name);a++)
+            for(unsigned int a=0;a<strlen(f.name);a++)
            {
            if( f.name[a]=='.')
            {

@@ -604,8 +604,9 @@ case KEY_SPACE:
         case KEY_SEMICOLON:
            if(index_type==0)//le M qui est point en clavier americain
            {
-           if (key_shifts & KB_SHIFT_FLAG || index_false_shift==1)
-           { if(index_show_mover_window=0){add_a_window(W_MOVER);}
+           if ((key_shifts & KB_SHIFT_FLAG) || (index_false_shift==1))
+           { if(index_show_mover_window==0)
+           {add_a_window(W_MOVER);}
            else {substract_a_window(W_MOVER);}}
            }
            else if(index_type==1)

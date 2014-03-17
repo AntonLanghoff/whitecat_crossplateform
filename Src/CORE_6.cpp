@@ -2368,7 +2368,7 @@ int scan_audiofolder()
     {
             while(!al_findnext(&f))
             {
-            for(int a=0;a<strlen(f.name);a++)
+            for(unsigned int a=0;a<strlen(f.name);a++)
             {
                 if(f.name[a]=='.')
                 {
@@ -2795,7 +2795,7 @@ for (int pe=0;pe<core_user_define_nb_faders;pe++)
            Snaplfo_do_next_step[p][0]=lfo_do_next_step[p][0];
            Snaplfo_do_next_step[p][1]=lfo_do_next_step[p][1];
      }
-     if(loops=1)
+     if(loops==1)
      {
            for(int d=0;d<core_user_define_nb_docks;d++)
            {
@@ -2836,7 +2836,7 @@ int do_recall_fadersstate(bool fads, bool speeds, bool locks, bool lfos, bool lo
            lfo_do_next_step[p][0]=Snaplfo_do_next_step[p][0];
            lfo_do_next_step[p][1]=Snaplfo_do_next_step[p][1];
      }
-     if(loops=1)
+     if(loops==1)
      {
            for(int d=0;d<core_user_define_nb_docks;d++)
            {
@@ -3018,7 +3018,7 @@ return(0);
 int send_my_midi_note( int letype,  int lechannel, int lanote, int lavelocite, int laduree)
 {
  MidiEvPtr eMid;
- if (eMid = MidiNewEv(letype))
+ if ((eMid = MidiNewEv(letype)))
  		  	{
 			Port(eMid) = 0;
 			Chan(eMid) = lechannel;
@@ -3035,7 +3035,7 @@ int send_my_midi_note_delayed( int letype,  int lechannel, int lanote, int lavel
 {
  MidiEvPtr eMid;
  long  dt = MidiGetTime();
- if (eMid = MidiNewEv(letype))
+ if ((eMid = MidiNewEv(letype)))
  		  	{
 			Port(eMid) = 0;
 			Chan(eMid) = lechannel;
@@ -3053,7 +3053,7 @@ int send_immidiateley_my_midi_cc( int letype,  int lechannel, int lanote, int la
 {
  MidiEvPtr eIMid;
 
- if (eIMid = MidiNewEv(letype))
+ if ((eIMid = MidiNewEv(letype)))
  		  	{
 			Port(eIMid) = 0;
 			Chan(eIMid) = lechannel;
@@ -3851,7 +3851,7 @@ return(0);
 int write_show_coming_from()
 {
 FILE *fpi;
-if(fpi=fopen("user/show_coming_from.txt","w"))//etait wb
+if((fpi=fopen("user/show_coming_from.txt","w")))//etait wb
 {
 fprintf(fpi,"%s",my_show_is_coming_from);
 }

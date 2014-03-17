@@ -326,7 +326,7 @@ do_light_setpos[cmptfader]=1;
 }
 }
 
-else if(index_main_clear==1 && index_do_dock==0)//clear
+else if((index_main_clear==1) && (index_do_dock==0))//clear
 {
 StopPosOn[cmptfader]=0;
 LevelStopPos[cmptfader]=999;
